@@ -1,13 +1,13 @@
 class Frutas {
   
   float posmx = int(random(0, 10))*100;
-  float posmy = int(random(-40, 0))*100;
+  float posmy = int(random(-40, 0))*400;
   float posbrox = int(random(0, 10))*100;
-  float posbroy = int(random(-40, 0))*100;
+  float posbroy = int(random(-40, 0))*400;
   float posbax = int(random(0, 10))*100;
-  float posbay = int(random(-40, 0))*100;
+  float posbay = int(random(-40, 0))*400;
   float poszx = int(random(0, 10))*100;
-  float poszy = int(random(-40, 0))*100;
+  float poszy = int(random(-40, 0))*400;
   float velm = 2;
   
   Frutas(){

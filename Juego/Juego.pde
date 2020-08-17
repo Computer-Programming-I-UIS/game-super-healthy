@@ -1,8 +1,8 @@
-
-
 int juego = 0;
 
 PImage fondo1;
+PImage personajeinicio;
+
 PImage fondo2;
 PImage fondo3;
 PImage p;
@@ -29,6 +29,9 @@ PImage yogurt;
 PImage chocolate;
 PImage dulce;
 
+PImage basura;
+PImage veneno;
+
 Inicio inicio;
 PantallaJuego pj;
 Personaje per;
@@ -37,16 +40,19 @@ Cereales[] cereal = new Cereales[8];
 Frutas[] fru = new Frutas[5];
 Lacteos[] lac = new Lacteos[4];
 Azucares[] azu = new Azucares[2];
+Basura[] bas = new Basura[3];
 
 void setup(){
 
   size(800, 600);
   
   fondo1 = loadImage("fondo-inicio1.jpeg");
+  personajeinicio = loadImage("SUPER.gif");
+  
    fondo2 = loadImage("fondo-2.png");
-   fondo3 = loadImage("fondoclaro.png");
+   fondo3 = loadImage("colores.jpeg");
    
-    p = loadImage("personaje_2.png");
+    p = loadImage("personaje-juego.png");
     
     huevo = loadImage("comida-huevo4.png");
     pescado = loadImage("comida-pescado1.png");
@@ -69,6 +75,9 @@ void setup(){
     
     chocolate = loadImage("comida-chocolate1.png");
     dulce = loadImage("comida-dulce1.png");
+    
+    basura = loadImage("basura1.png");
+    veneno = loadImage("veneno2.png");
    
    inicio = new Inicio();
    pj = new PantallaJuego();
@@ -94,6 +103,10 @@ void setup(){
     azu[i] = new Azucares();
    }
    
+   for (int i=0; i < bas.length; i++){
+    bas[i] = new Basura();
+   }
+   
 }
 
 void draw(){
@@ -103,9 +116,6 @@ void draw(){
   
   if(juego == 2){
   pj.display();
-  
-  per.display();
-  per.move();
   
   for(int i = 0; i < prot.length; i++){
    prot[i].display();
@@ -131,6 +141,14 @@ void draw(){
    azu[i].display();
    azu[i].move();
   }
+  
+  for(int i = 0; i < bas.length; i++){
+   bas[i].display();
+   bas[i].move();
+  }
+  
+  per.display();
+  per.move();
   
   }
 }

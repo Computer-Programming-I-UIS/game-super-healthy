@@ -1,7 +1,7 @@
 class Personaje {
   
-  float posx = 365;
-  float posy = 480;
+  float posx = 350;
+  float posy = 500;
   
  Personaje() {
    

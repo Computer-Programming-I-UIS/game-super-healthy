@@ -8,6 +8,7 @@ class Inicio {
     
    if(juego == 0){
     image(fondo1, 0, 0);
+    
    }
   }
   
