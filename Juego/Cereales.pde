@@ -8,7 +8,7 @@ class Cereales {
   float pospapay = int(random(-40, 0))*100;
   float pospanx = int(random(0, 10))*100;
   float pospany = int(random(-40, 0))*100;
-  float vela = 2;
+  float vela = 1;
   
   Cereales(){
   }

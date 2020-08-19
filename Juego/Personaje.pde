@@ -1,7 +1,6 @@
 class Personaje {
   
-  float posx = 350;
-  float posy = 500;
+  
   
  Personaje() {
    
@@ -19,9 +18,11 @@ class Personaje {
      posx = posx - 2; 
     }
     
-    if(keyPressed && key == CODED && keyCode == RIGHT && posx < width - 74){
+    if(keyPressed && key == CODED && keyCode == RIGHT && posx < width - 104){
      posx = posx + 2; 
     }
     
   }
+  
+  
 }

@@ -15,7 +15,6 @@ PImage filete;
 PImage manzana;
 PImage brocoli;
 PImage banano;
-PImage zanahoria;
 
 PImage arroz;
 PImage pasta;
@@ -26,30 +25,40 @@ PImage leche;
 PImage queso;
 PImage yogurt;
 
+PImage aguacate;
+PImage miel;
+
 PImage chocolate;
 PImage dulce;
+PImage pizza;
+PImage hamburguesa;
+PImage perro;
+PImage gaseosa;
+PImage papasfritas;
+PImage dona;
 
-PImage basura;
-PImage veneno;
-
+float posx = 350;
+float posy = 500;
+  
 Inicio inicio;
 PantallaJuego pj;
 Personaje per;
 Proteina[] prot = new Proteina[3];
-Cereales[] cereal = new Cereales[8];
-Frutas[] fru = new Frutas[5];
-Lacteos[] lac = new Lacteos[4];
-Azucares[] azu = new Azucares[2];
-Basura[] bas = new Basura[3];
+Cereales[] cereal = new Cereales[3];
+Frutas[] fru = new Frutas[3];
+Lacteos[] lac = new Lacteos[3];
+Azucares[] azu = new Azucares[3];
+NoComer[] fast = new NoComer[6];
+
+Barras barras;
 
 void setup(){
 
   size(800, 600);
   
   fondo1 = loadImage("fondo-inicio1.jpeg");
-  personajeinicio = loadImage("SUPER.gif");
   
-   fondo2 = loadImage("fondo-2.png");
+   fondo2 = loadImage("circulo-grupos-alimenticios 1.png");
    fondo3 = loadImage("colores.jpeg");
    
     p = loadImage("personaje-juego.png");
@@ -67,21 +76,29 @@ void setup(){
     manzana = loadImage("comida-manzana1.png");
     brocoli = loadImage("comida-brocoli1.png");
     banano = loadImage("comida-banano1.png");
-    zanahoria = loadImage("comida-zanahoria1.png");
     
     leche = loadImage("comida-leche1.png");
     queso = loadImage("comida-queso1.png");
     yogurt = loadImage("comida-yogurt1.png");
     
+    aguacate = loadImage("comida-aguacate1.png");
+    miel = loadImage("comida-miel1.png");
+    
     chocolate = loadImage("comida-chocolate1.png");
     dulce = loadImage("comida-dulce1.png");
+    pizza = loadImage("comida-pizza1.png");
+    hamburguesa = loadImage("comida-hamburguesa1.png");
+    perro = loadImage("comida-hotdog1.png");
+    gaseosa = loadImage("comida-gaseosa1.png");
+    papasfritas = loadImage("comida-papasf1.png");
+    dona = loadImage("comida-dona1.png");
     
-    basura = loadImage("basura1.png");
-    veneno = loadImage("veneno2.png");
    
    inicio = new Inicio();
    pj = new PantallaJuego();
    per = new Personaje();
+   barras = new Barras();
+
    
    for (int i=0; i < prot.length; i++){
     prot[i] = new Proteina();
@@ -103,8 +120,8 @@ void setup(){
     azu[i] = new Azucares();
    }
    
-   for (int i=0; i < bas.length; i++){
-    bas[i] = new Basura();
+   for (int i=0; i < fast.length; i++){
+    fast[i] = new NoComer();
    }
    
 }
@@ -142,13 +159,16 @@ void draw(){
    azu[i].move();
   }
   
-  for(int i = 0; i < bas.length; i++){
-   bas[i].display();
-   bas[i].move();
+  for(int i = 0; i < fast.length; i++){
+   fast[i].display();
+   fast[i].move();
   }
+  
   
   per.display();
   per.move();
+  
+  barras.display();
   
   }
 }
