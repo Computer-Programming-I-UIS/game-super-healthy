@@ -1,10 +1,12 @@
 int juego = 0;
+boolean siguiente = false;
 
 PImage fondo1;
 PImage personajeinicio;
 
 PImage fondo2;
 PImage fondo3;
+PImage fondo2_1;
 PImage p;
 
 PImage huevo;
@@ -74,6 +76,7 @@ void setup(){
   }
   
    fondo2 = loadImage("Instrucciones_1.png");
+   fondo2_1 = loadImage("circulo-grupos-alimenticios 1.png");
    fondo3 = loadImage("colores.jpeg");
    
     p = loadImage("personaje-juego.png");
@@ -144,16 +147,15 @@ void setup(){
    
 }
 
-
-
 void draw(){
  
+  
   if(pa == true){
   
   inicio.display();
   inicio.comenzar();
 
-  if(juego == 2){
+  if(juego == 3){
   pj.display();
   
   for(int i = 0; i < prot.length; i++){
@@ -198,7 +200,7 @@ void draw(){
 
 void mousePressed(){
   
-  if(juego == 2 && mouseX > 700 && mouseY > 10 && mousePressed && mouseX < 780 && mouseY < 40){
+  if(juego == 3 && mouseX > 700 && mouseY > 10 && mousePressed && mouseX < 780 && mouseY < 40){
     
     if(pa == true){
       pa = false;

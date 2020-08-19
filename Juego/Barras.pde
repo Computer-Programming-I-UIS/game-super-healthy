@@ -11,8 +11,6 @@ class Barras {
     fill(#CBC5C5);
     rect(0, 0, 800, 50);
     
-    
-    
     image(pausa, 700, 10);
     
   }

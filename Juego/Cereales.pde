@@ -29,4 +29,31 @@ class Cereales {
     pospany += vela;
     
   }
+  float getPosArrozX(){
+   return posax;
+  }
+  float getPosArrozY(){
+   return posay;
+  }
+  
+  float getPosPastaX(){
+   return pospastax;
+  }
+  float getPosPastaY(){
+   return pospastay;
+  }
+  
+  float getPosPapaX(){
+   return pospapax;
+  }
+  float getPosPapaY(){
+   return pospapay;
+  }
+  
+  float getPosPanX(){
+   return pospanx;
+  }
+  float getPosPanY(){
+   return pospany;
+  }
 }

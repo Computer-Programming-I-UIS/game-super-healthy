@@ -15,6 +15,8 @@ class Proteina {
   
   void display(){
    
+    
+    
     image(huevo, poshx, poshy);
     image(pescado, pospezx, pospezy);
     image(pollo, pospollox, pospolloy);
@@ -23,12 +25,40 @@ class Proteina {
   }
   
   void move(){
-   
+  
     poshy += velh;
     pospezy += velh;
     pospolloy += velh;
     posfy += velh;
     
+  }
+  
+  float getPosHuevoX(){
+   return poshx;
+  }
+  float getPosHuevoY(){
+   return poshy;
+  }
+  
+  float getPosPezX(){
+   return pospezx;
+  }
+  float getPosPezY(){
+   return pospezy;
+  }
+  
+  float getPosPolloX(){
+   return pospollox;
+  }
+  float getPosPolloY(){
+   return pospolloy;
+  }
+  
+  float getPosFileteX(){
+   return posfx;
+  }
+  float getPosFileteY(){
+   return posfy;
   }
   
 }

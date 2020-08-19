@@ -12,8 +12,8 @@ class NoComer {
   float posperroy = int(random(-40, 0))*100;
   float posgaseosax = int(random(0, 10))*100;
   float posgaseosay = int(random(-40, 0))*100;
-  float pospapasfritasx  = int(random(0, 10))*100;
-  float pospapasfritasy = int(random(-40, 0))*100;
+  float pospapasfx  = int(random(0, 10))*100;
+  float pospapasfy = int(random(-40, 0))*100;
   float posdonax  = int(random(0, 10))*100;
   float posdonay = int(random(-40, 0))*100;
   float velc = 1;
@@ -29,7 +29,7 @@ class NoComer {
     image(hamburguesa, poshamburguesax, poshamburguesay);
     image(perro, posperrox, posperroy);
     image(gaseosa, posgaseosax, posgaseosay);
-    image(papasfritas, pospapasfritasx, pospapasfritasy);
+    image(papasfritas, pospapasfx, pospapasfy);
     image(dona, posdonax, posdonay);   
   }
   
@@ -41,8 +41,63 @@ class NoComer {
     poshamburguesay += velc;
     posperroy += velc;
     posgaseosay += velc;
-    pospapasfritasy += velc;
+    pospapasfy += velc;
     posdonay += velc;
     
+  }
+  
+  float getPosChocolateX(){
+   return poschocolatex;
+  }
+  float getPosChocolateY(){
+   return poschocolatey;
+  }
+  
+  float getPosDulceX(){
+   return posdulcex;
+  }
+  float getPosDulceY(){
+   return posdulcey;
+  }
+  
+  float getPosPizzaX(){
+   return pospizzax;
+  }
+  float getPosPizzaY(){
+   return pospizzay;
+  }
+  
+  float getPosHamburguesaX(){
+   return poshamburguesax;
+  }
+  float getPosHamburguesaY(){
+   return poshamburguesay;
+  }
+  float getPosPerroX(){
+   return posperrox;
+  }
+  float getPosPerroY(){
+   return posperroy;
+  }
+  
+  float getPosGaseosaX(){
+   return posgaseosax;
+  }
+  float getPosGaseosaY(){
+   return posgaseosay;
+  }
+  
+  float getPosPapasFX(){
+   return pospapasfx;
+  }
+  float getPosPapasFY(){
+   return pospapasfy;
+  }
+  
+  float getPosDonaX(){
+   return posdonax;
+  }
+  float getPosDonaY(){
+   return posdonay;
   }
 }

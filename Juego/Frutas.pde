@@ -24,4 +24,24 @@ class Frutas {
     posbroy += velm;
     posbay += velm;
   }
+ float getPosManzanaX(){
+   return posmx;
+  }
+  float getPosManzanaY(){
+   return posmy;
+  }
+  
+  float getPosBrocoliX(){
+   return posbrox;
+  }
+  float getPosBrocoliY(){
+   return posbroy;
+  }
+  
+  float getPosBananoX(){
+   return posbax;
+  }
+  float getPosBananoY(){
+   return posbay;
+  }
 }

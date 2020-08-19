@@ -26,4 +26,26 @@ class Lacteos {
     posyy += vell;
     
   }
+  
+  float getPosLecheX(){
+   return poslx;
+  }
+  float getPosLeceY(){
+   return posly;
+  }
+  
+  float getPosQuesoX(){
+   return posqx;
+  }
+  float getPosQuesoY(){
+   return posqy;
+  }
+  
+  float getPosYogurtX(){
+   return posyx;
+  }
+  float getPosYogurtY(){
+   return posyy;
+  }
+  
 }

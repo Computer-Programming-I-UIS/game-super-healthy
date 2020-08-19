@@ -1,11 +1,9 @@
 class Azucares {
   
-  float poscx  = int(random(0, 10))*100;
-  float poscy = int(random(-40, 0))*100;
-  float posdx = int(random(0, 10))*100;
-  float posdy = int(random(-40, 0))*100;
-  float posacx  = int(random(0, 10))*100;
-  float posacy = int(random(-40, 0))*100;
+  float posagx = int(random(0, 10))*100;
+  float posagy = int(random(-40, 0))*100;
+  float posmix  = int(random(0, 10))*100;
+  float posmiy = int(random(-40, 0))*100;
   float velc = 1;
   
   Azucares(){
@@ -13,17 +11,30 @@ class Azucares {
   
   void display(){
    
-    image(aguacate, poscx, poscy);
-    image(miel, posdx, posdy);
+    image(aguacate, posagx, posagy);
+    image(miel, posmix, posmiy);
     //image(aceite, posacx, posacy);
    
   }
   
   void move(){
    
-    poscy += velc;
-    posdy += velc;
-    posacy += velc;
+    posagy += velc;
+    posmiy += velc;
     
+    
+  }
+  float getPosAguacateX(){
+   return posagx;
+  }
+  float getPosAguacateY(){
+   return posagy;
+  }
+  
+  float getPosMielX(){
+   return posmix;
+  }
+  float getPosMielY(){
+   return posmiy;
   }
 }
