@@ -70,10 +70,10 @@ void setup(){
   fondo1 = loadImage("fondo-inicio1.jpeg");
   
   for(int i = 0; i < images.length; i++){
-   images[i] = loadImage("inicio_" + i ".png"); 
+   images[i] = loadImage("Inicio_" + i + ".png"); 
   }
   
-   fondo2 = loadImage("circulo-grupos-alimenticios 1.png");
+   fondo2 = loadImage("Instrucciones_1.png");
    fondo3 = loadImage("colores.jpeg");
    
     p = loadImage("personaje-juego.png");
@@ -194,7 +194,6 @@ void draw(){
   }
 }
 
-println(pa, juego);
 }
 
 void mousePressed(){
