@@ -39,6 +39,16 @@ PImage dona;
 
 float posx = 350;
 float posy = 500;
+
+boolean pa = true;
+
+PImage pausa;
+PImage play;
+
+int maxImages = 17;
+int ImageIndex = 0;
+
+PImage [] images = new PImage[maxImages];
   
 Inicio inicio;
 PantallaJuego pj;
@@ -54,9 +64,14 @@ Barras barras;
 
 void setup(){
 
+  
   size(800, 600);
   
   fondo1 = loadImage("fondo-inicio1.jpeg");
+  
+  for(int i = 0; i < images.length; i++){
+   images[i] = loadImage("inicio_" + i ".png"); 
+  }
   
    fondo2 = loadImage("circulo-grupos-alimenticios 1.png");
    fondo3 = loadImage("colores.jpeg");
@@ -93,6 +108,9 @@ void setup(){
     papasfritas = loadImage("comida-papasf1.png");
     dona = loadImage("comida-dona1.png");
     
+    pausa = loadImage("pausa.png");
+    play = loadImage("play.png");
+    
    
    inicio = new Inicio();
    pj = new PantallaJuego();
@@ -126,11 +144,15 @@ void setup(){
    
 }
 
+
+
 void draw(){
  
+  if(pa == true){
+  
   inicio.display();
   inicio.comenzar();
-  
+
   if(juego == 2){
   pj.display();
   
@@ -164,11 +186,32 @@ void draw(){
    fast[i].move();
   }
   
-  
   per.display();
   per.move();
   
   barras.display();
   
   }
+}
+
+println(pa, juego);
+}
+
+void mousePressed(){
+  
+  if(juego == 2 && mouseX > 700 && mouseY > 10 && mousePressed && mouseX < 780 && mouseY < 40){
+    
+    if(pa == true){
+      pa = false;
+      image(play, 700, 10);
+      delay(70);
+      
+    }else{
+      pa = true;
+      image(pausa, 700, 10);
+      delay(70);
+    }
+  
+  }
+  
 }

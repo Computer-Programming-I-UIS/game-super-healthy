@@ -22,5 +22,6 @@ class Frutas {
    
     posmy += velm;
     posbroy += velm;
+    posbay += velm;
   }
 }

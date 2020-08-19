@@ -1,5 +1,6 @@
 class Inicio {
   
+  
  Inicio(){
    
  }
@@ -8,7 +9,6 @@ class Inicio {
     
    if(juego == 0){
     image(fondo1, 0, 0);
-    
    }
   }
   
@@ -19,6 +19,7 @@ class Inicio {
    
    if(juego == 1){
     image(fondo2, 0, 0);
+    
    }
    
    if(juego == 1 && mouseX > 500 && mouseY > 500 && mousePressed){
