@@ -22,8 +22,21 @@ class Azucares {
     posagy += velc;
     posmiy += velc;
     
-    
   }
+  
+  void reaparecer(){
+
+    if(posagy > height){
+    posagy = int(random(-34, -32))*100;
+    posagx = int(random(0, 8))*100;
+   }
+   if(posmiy > height){
+    posmiy = int(random(-34, -32))*100;
+    posmix = int(random(0, 8))*100;
+   }
+
+  }
+  
   float getPosAguacateX(){
    return posagx;
   }

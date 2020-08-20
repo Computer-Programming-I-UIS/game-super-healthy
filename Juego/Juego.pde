@@ -1,5 +1,6 @@
 int juego = 0;
 boolean siguiente = false;
+boolean suma = false;
 
 PImage fondo1;
 PImage personajeinicio;
@@ -52,15 +53,18 @@ int ImageIndex = 0;
 
 PImage [] images = new PImage[maxImages];
   
+float vida = 100;
+
+
 Inicio inicio;
 PantallaJuego pj;
 Personaje per;
-Proteina[] prot = new Proteina[3];
-Cereales[] cereal = new Cereales[3];
+Proteina[] prot = new Proteina[2];
+Cereales[] cereal = new Cereales[2];
 Frutas[] fru = new Frutas[3];
 Lacteos[] lac = new Lacteos[3];
 Azucares[] azu = new Azucares[3];
-NoComer[] fast = new NoComer[6];
+NoComer[] fast = new NoComer[5];
 
 Barras barras;
 
@@ -161,38 +165,46 @@ void draw(){
   for(int i = 0; i < prot.length; i++){
    prot[i].display();
    prot[i].move();
+   prot[i].reaparecer();
   }
   
    for(int i = 0; i < cereal.length; i++){
    cereal[i].display();
    cereal[i].move();
+   cereal[i].reaparecer();
   }
   
   for(int i = 0; i < fru.length; i++){
    fru[i].display();
    fru[i].move();
+   fru[i].reaparecer();
   }
   
   for(int i = 0; i < lac.length; i++){
    lac[i].display();
    lac[i].move();
+   lac[i].reaparecer();
   }
   
   for(int i = 0; i < azu.length; i++){
    azu[i].display();
    azu[i].move();
+   azu[i].reaparecer();
   }
   
   for(int i = 0; i < fast.length; i++){
    fast[i].display();
    fast[i].move();
+   fast[i].reaparecer();
   }
   
   per.display();
   per.move();
   
   barras.display();
-  
+  for(int i = 0; i < prot.length; i++){
+  barras.vidasuma(prot[i].getPosHuevoX(),prot[i].getPosHuevoY(),prot[i].getPosPezX(),prot[i].getPosPezY());
+  }
   }
 }
 

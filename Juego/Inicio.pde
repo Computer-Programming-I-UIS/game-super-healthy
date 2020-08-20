@@ -29,7 +29,6 @@ class Inicio {
       delay(50);
       if(siguiente == true){
     juego = 2;
-    
     siguiente = false;
     delay(90);
       }

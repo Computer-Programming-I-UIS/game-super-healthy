@@ -46,6 +46,42 @@ class NoComer {
     
   }
   
+  void reaparecer(){
+   
+    if(poschocolatey > height){
+    poschocolatey = int(random(-34, -32))*100;
+    poschocolatex = int(random(0, 8))*100;
+   }
+   if(posdulcey > height){
+    posdulcey = int(random(-34, -32))*100;
+    posdulcex = int(random(0, 8))*100;
+   }
+   if(pospizzay > height){
+    pospizzay = int(random(-34, -32))*100;
+    pospizzax = int(random(0, 8))*100;
+   }
+   if(poshamburguesay > height){
+    poshamburguesay = int(random(-34, -32))*100;
+    poshamburguesax = int(random(0, 8))*100;
+   }
+   if(posperroy > height){
+    posperroy = int(random(-34, -32))*100;
+    posperrox = int(random(0, 8))*100;
+   }
+   if(posgaseosay > height){
+    posgaseosay = int(random(-34, -32))*100;
+    posgaseosax = int(random(0, 8))*100;
+   }
+   if(pospapasfy > height){
+    pospapasfy = int(random(-34, -32))*100;
+    pospapasfx = int(random(0, 8))*100;
+   }
+   if(posdonay > height){
+    posdonay = int(random(-34, -32))*100;
+    posdonax = int(random(0, 8))*100;
+   }
+  }
+  
   float getPosChocolateX(){
    return poschocolatex;
   }

@@ -27,6 +27,23 @@ class Lacteos {
     
   }
   
+  void reaparecer(){
+    
+    if(posly > height){
+    posly = int(random(-34, -32))*100;
+    poslx = int(random(0, 8))*100;
+   }
+   if(posqy > height){
+    posqy = int(random(-34, -32))*100;
+    posqx = int(random(0, 8))*100;
+   }
+   if(posyy > height){
+    posyy = int(random(-34, -32))*100;
+    posyx = int(random(0, 8))*100;
+   }
+   
+  }
+  
   float getPosLecheX(){
    return poslx;
   }

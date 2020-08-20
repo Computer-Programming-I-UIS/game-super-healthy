@@ -33,6 +33,25 @@ class Proteina {
     
   }
   
+  void reaparecer(){
+   if(poshy > height){
+    poshy = int(random(-34, -32))*100;
+    poshx = int(random(0, 8))*100;
+   }
+   if(pospezy > height){
+    pospezy = int(random(-34, -32))*100;
+    pospezx = int(random(0, 8))*100;
+   }
+   if(pospolloy > height){
+    pospolloy = int(random(-34, -32))*100;
+    pospollox = int(random(0, 8))*100;
+   }
+   if(posfy > height){
+    posfy = int(random(-34, -32))*100;
+    posfx = int(random(0, 8))*100;
+   }
+  }
+  
   float getPosHuevoX(){
    return poshx;
   }

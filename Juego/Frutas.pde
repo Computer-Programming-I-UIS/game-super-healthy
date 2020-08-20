@@ -24,6 +24,24 @@ class Frutas {
     posbroy += velm;
     posbay += velm;
   }
+  
+  void reaparecer(){
+   
+    if(posmy > height){
+    posmy = int(random(-34, -32))*100;
+    posmx = int(random(0, 8))*100;
+   }
+   if(posbroy > height){
+    posbroy = int(random(-34, -32))*100;
+    posbrox = int(random(0, 8))*100;
+   }
+   if(posbay > height){
+    posbay = int(random(-34, -32))*100;
+    posbax = int(random(0, 8))*100;
+   }
+   
+  }
+  
  float getPosManzanaX(){
    return posmx;
   }

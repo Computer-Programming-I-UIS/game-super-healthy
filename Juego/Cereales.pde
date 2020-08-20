@@ -29,6 +29,26 @@ class Cereales {
     pospany += vela;
     
   }
+  
+  void reaparecer(){
+   if(posay > height){
+    posay = int(random(-34, -32))*100;
+    posax = int(random(0, 8))*100;
+   }
+   if(pospastay > height){
+    pospastay = int(random(-34, -32))*100;
+    pospastax = int(random(0, 8))*100;
+   }
+   if(pospapay > height){
+    pospapay = int(random(-34, -32))*100;
+    pospapax = int(random(0, 8))*100;
+   }
+   if(pospany > height){
+    pospany = int(random(-34, -32))*100;
+    pospanx = int(random(0, 8))*100;
+   }
+  }
+  
   float getPosArrozX(){
    return posax;
   }
