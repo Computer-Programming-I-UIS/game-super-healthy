@@ -1,6 +1,9 @@
 int juego = 0;
 boolean siguiente = false;
 boolean suma = false;
+boolean resta = false;
+
+PImage barra;
 
 PImage fondo1;
 PImage personajeinicio;
@@ -79,6 +82,8 @@ void setup(){
    images[i] = loadImage("Inicio_" + i + ".png"); 
   }
   
+   barra = loadImage("vida2.png");
+  
    fondo2 = loadImage("Instrucciones_1.png");
    fondo2_1 = loadImage("circulo-grupos-alimenticios 1.png");
    fondo3 = loadImage("colores.jpeg");
@@ -118,11 +123,11 @@ void setup(){
     pausa = loadImage("pausa.png");
     play = loadImage("play.png");
     
-   
-   inicio = new Inicio();
-   pj = new PantallaJuego();
-   per = new Personaje();
-   barras = new Barras();
+     
+     inicio = new Inicio();
+     pj = new PantallaJuego();
+     per = new Personaje();
+     barras = new Barras();
 
    
    for (int i=0; i < prot.length; i++){
@@ -156,58 +161,86 @@ void draw(){
   
   if(pa == true){
   
-  inicio.display();
-  inicio.comenzar();
-
-  if(juego == 3){
-  pj.display();
+    inicio.display();
+    inicio.comenzar();
   
-  for(int i = 0; i < prot.length; i++){
-   prot[i].display();
-   prot[i].move();
-   prot[i].reaparecer();
+      if(juego == 3){
+        pj.display();
+        
+        for(int i = 0; i < prot.length; i++){
+           prot[i].display();
+           prot[i].move();
+           prot[i].reaparecer();
+        }
+        
+         for(int i = 0; i < cereal.length; i++){
+           cereal[i].display();
+           cereal[i].move();
+           cereal[i].reaparecer();
+        }
+        
+        for(int i = 0; i < fru.length; i++){
+           fru[i].display();
+           fru[i].move();
+           fru[i].reaparecer();
+        }
+        
+        for(int i = 0; i < lac.length; i++){
+           lac[i].display();
+           lac[i].move();
+           lac[i].reaparecer();
+        }
+        
+        for(int i = 0; i < azu.length; i++){
+           azu[i].display();
+           azu[i].move();
+           azu[i].reaparecer();
+        }
+        
+        for(int i = 0; i < fast.length; i++){
+           fast[i].display();
+           fast[i].move();
+           fast[i].reaparecer();
+        }
+        
+        per.display();
+        per.move();
+        
+        barras.display();
+        
+        for(int i = 0; i < prot.length; i++){
+          barras.vidasumaprot(prot[i].getPosHuevoX(),prot[i].getPosHuevoY(),prot[i].getPosPezX(),prot[i].getPosPezY(),
+          prot[i].getPosPolloX(),prot[i].getPosPolloY(),prot[i].getPosFileteX(),prot[i].getPosFileteY());
+        }
+        
+        for(int i = 0; i < cereal.length; i++){
+           barras.sumapuntoscereal(cereal[i].getPosArrozX(), cereal[i].getPosArrozY(), cereal[i].getPosPastaX(), cereal[i].getPosPastaY(),
+           cereal[i].getPosPapaX(), cereal[i].getPosPapaY(), cereal[i].getPosPanX(), cereal[i].getPosPanY());
+        }
+        
+        for(int i = 0; i < fru.length; i++){
+           barras.sumapuntosfrutas(fru[i].getPosManzanaX(), fru[i].getPosManzanaY(), fru[i].getPosBrocoliX(), fru[i].getPosBrocoliY(),
+           fru[i].getPosBananoX(), fru[i].getPosBananoY());
+        }
+        
+        for(int i = 0; i < lac.length; i++){
+           barras.sumapuntoslacteos(lac[i].getPosLecheX(), lac[i].getPosLecheY(), lac[i].getPosQuesoX(), lac[i].getPosQuesoY(),
+           lac[i].getPosYogurtX(), lac[i].getPosYogurtY());
+        }
+        
+        for(int i = 0; i < azu.length; i++){
+           barras.sumapuntosazucares(azu[i].getPosAguacateX(), azu[i].getPosAguacateY(), azu[i].getPosMielX(), azu[i].getPosMielY());
+        }
+        
+        for(int i = 0; i < fast.length; i++){
+           barras.bajapuntosfast(fast[i].getPosChocolateX(), fast[i].getPosChocolateY(), fast[i].getPosDulceX(), fast[i].getPosDulceY(),
+           fast[i].getPosPizzaX(), fast[i].getPosPizzaY(), fast[i].getPosHamburguesaX(), fast[i].getPosHamburguesaY(),
+           fast[i].getPosPerroX(), fast[i].getPosPerroY(), fast[i].getPosGaseosaX(), fast[i].getPosGaseosaY(),
+           fast[i].getPosPapasFX(), fast[i].getPosPapasFY(), fast[i].getPosDonaX(), fast[i].getPosDonaY());
+        }
+        
+      }
   }
-  
-   for(int i = 0; i < cereal.length; i++){
-   cereal[i].display();
-   cereal[i].move();
-   cereal[i].reaparecer();
-  }
-  
-  for(int i = 0; i < fru.length; i++){
-   fru[i].display();
-   fru[i].move();
-   fru[i].reaparecer();
-  }
-  
-  for(int i = 0; i < lac.length; i++){
-   lac[i].display();
-   lac[i].move();
-   lac[i].reaparecer();
-  }
-  
-  for(int i = 0; i < azu.length; i++){
-   azu[i].display();
-   azu[i].move();
-   azu[i].reaparecer();
-  }
-  
-  for(int i = 0; i < fast.length; i++){
-   fast[i].display();
-   fast[i].move();
-   fast[i].reaparecer();
-  }
-  
-  per.display();
-  per.move();
-  
-  barras.display();
-  for(int i = 0; i < prot.length; i++){
-  barras.vidasuma(prot[i].getPosHuevoX(),prot[i].getPosHuevoY(),prot[i].getPosPezX(),prot[i].getPosPezY());
-  }
-  }
-}
-
 }
 
 void mousePressed(){
@@ -218,13 +251,10 @@ void mousePressed(){
       pa = false;
       image(play, 700, 10);
       delay(70);
-      
     }else{
       pa = true;
       image(pausa, 700, 10);
       delay(70);
     }
-  
   }
-  
 }

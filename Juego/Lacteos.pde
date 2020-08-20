@@ -47,7 +47,7 @@ class Lacteos {
   float getPosLecheX(){
    return poslx;
   }
-  float getPosLeceY(){
+  float getPosLecheY(){
    return posly;
   }
   

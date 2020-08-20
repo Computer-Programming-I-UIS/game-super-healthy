@@ -13,8 +13,7 @@ class Azucares {
    
     image(aguacate, posagx, posagy);
     image(miel, posmix, posmiy);
-    //image(aceite, posacx, posacy);
-   
+ 
   }
   
   void move(){
