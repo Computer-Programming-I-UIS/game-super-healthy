@@ -22,8 +22,10 @@ class Inicio {
    
    if(juego == 1){
      frameRate(60);
-    image(fondo2, 0, 0);
+    image(images2[ImageIndex2], 0, 0);
+    ImageIndex2 = (ImageIndex2+1) % images2.length;
    }
+   
     if(juego == 1 && mouseX > 668 && mouseY > 38 && mousePressed && mouseX < 748 && mouseY < 78 && mousePressed){
       siguiente = true;
       delay(50);
@@ -44,10 +46,8 @@ class Inicio {
     delay(50);
     if(siguiente == true){
     juego = 3;
-    
     siguiente = false;
     }
-   }
-   
+   } 
 }
 }

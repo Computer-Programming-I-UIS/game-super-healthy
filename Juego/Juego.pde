@@ -55,6 +55,11 @@ int maxImages = 17;
 int ImageIndex = 0;
 
 PImage [] images = new PImage[maxImages];
+
+int maxImages2 = 120;
+int ImageIndex2 = 0;
+
+PImage [] images2 = new PImage[maxImages2];
   
 float vida = 100;
 
@@ -76,15 +81,17 @@ void setup(){
   
   size(800, 600);
   
-  fondo1 = loadImage("fondo-inicio1.jpeg");
   
   for(int i = 0; i < images.length; i++){
    images[i] = loadImage("Inicio_" + i + ".png"); 
   }
   
-   barra = loadImage("vida2.png");
+  for(int i = 0; i < images2.length; i++){
+   images2[i] = loadImage("Intrucciones_ " + i + ".png"); 
+  }
   
-   fondo2 = loadImage("Instrucciones_1.png");
+   barra = loadImage("vida2.png");
+ 
    fondo2_1 = loadImage("circulo-grupos-alimenticios 1.png");
    fondo3 = loadImage("colores.jpeg");
    
