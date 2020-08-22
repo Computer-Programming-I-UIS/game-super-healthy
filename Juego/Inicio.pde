@@ -8,9 +8,11 @@ class Inicio {
   void display(){
     
    if(juego == 0){
-     frameRate(6);
+        frameRate(60);
     image(images[ImageIndex], 0, 0);
     ImageIndex = (ImageIndex+1) % images.length;
+    
+   
    }
   }
   

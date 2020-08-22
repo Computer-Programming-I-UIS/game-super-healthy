@@ -13,12 +13,24 @@ class Barras {
     
     image(pausa, 700, 10);
     
+    
+     if(sonido){
+      player.play(); 
+      image(off, 600, 10);
+     }
+     else{
+      player.pause();
+      image(on, 600, 10);
+     }
+    
     if(vida >= 0){
     vida = vida - 0.03;
     }
     fill(255);
     rect(14, 16, 14 + (vida*2), 10);
     image(barra, 8, 10);
+    
+    
     
   }
   

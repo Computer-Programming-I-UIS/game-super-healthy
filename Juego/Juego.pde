@@ -51,6 +51,11 @@ boolean pa = true;
 PImage pausa;
 PImage play;
 
+
+boolean sonido = true;
+PImage on;
+PImage off;
+
 int maxImages = 17;
 int ImageIndex = 0;
 
@@ -63,6 +68,15 @@ PImage [] images2 = new PImage[maxImages2];
   
 float vida = 100;
 
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+Minim minim;
+AudioPlayer player;
 
 Inicio inicio;
 PantallaJuego pj;
@@ -80,6 +94,9 @@ void setup(){
 
   
   size(800, 600);
+  
+  minim = new Minim(this);
+  player = minim.loadFile("cartoons-full.wav", 1024);
   
   
   for(int i = 0; i < images.length; i++){
@@ -130,6 +147,8 @@ void setup(){
     pausa = loadImage("pausa.png");
     play = loadImage("play.png");
     
+    on = loadImage("on.png");
+    off = loadImage("off.png");
      
      inicio = new Inicio();
      pj = new PantallaJuego();
@@ -164,15 +183,25 @@ void setup(){
 }
 
 void draw(){
- 
+
   
   if(pa == true){
-  
+   
     inicio.display();
     inicio.comenzar();
-  
+ 
       if(juego == 3){
         pj.display();
+        
+         if(sonido == true){
+          player.play(); 
+          image(off, 700, 10);
+         }
+         if(sonido == false){
+          player.pause(); 
+          image(on, 700, 10);
+         }
+         
         
         for(int i = 0; i < prot.length; i++){
            prot[i].display();
@@ -247,6 +276,7 @@ void draw(){
         }
         
       }
+      
   }
 }
 
@@ -258,10 +288,28 @@ void mousePressed(){
       pa = false;
       image(play, 700, 10);
       delay(70);
+      
+      if(player.isPlaying()){
+       player.pause(); 
+      }
     }else{
       pa = true;
       image(pausa, 700, 10);
       delay(70);
     }
   }
+  
+  if(juego == 3 && mouseX > 600 && mouseY > 10 && mousePressed && mouseX < 680 && mouseY < 40){
+    
+    if(sonido == true){
+      sonido = false;
+      
+      
+    }else{
+      sonido = true;
+    
+      
+    }
+  }
+  
 }
