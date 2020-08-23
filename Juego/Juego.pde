@@ -109,7 +109,7 @@ void setup(){
   
    barra = loadImage("vida2.png");
  
-   fondo2_1 = loadImage("circulo-grupos-alimenticios 1.png");
+   fondo2_1 = loadImage("instrucciones2.jpeg");
    fondo3 = loadImage("colores.jpeg");
    
     p = loadImage("personaje-juego.png");

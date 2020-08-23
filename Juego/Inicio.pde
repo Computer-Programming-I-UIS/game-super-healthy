@@ -8,7 +8,7 @@ class Inicio {
   void display(){
     
    if(juego == 0){
-        frameRate(60);
+        frameRate(6);
     image(images[ImageIndex], 0, 0);
     ImageIndex = (ImageIndex+1) % images.length;
     
@@ -17,7 +17,7 @@ class Inicio {
   }
   
   void comenzar(){
-   if(juego == 0 && mousePressed){
+   if(juego == 0 && mousePressed && mouseX > 338 && mouseY < 484 && mouseY > 365 && mouseY < 410){
      juego = 1;
      
    }
