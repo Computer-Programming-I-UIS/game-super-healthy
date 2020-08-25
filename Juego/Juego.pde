@@ -85,6 +85,9 @@ PImage [] images5 = new PImage[maxImages5];
 
 PImage creditos;
   
+PImage mute;
+PImage muteno;
+
 float vida = 100;
 
 import ddf.minim.*;
@@ -124,6 +127,9 @@ void setup(){
   soundengine = new Minim(this);
   sonido1 = soundengine.loadSample("correct-ding.mp3", 1024);
   
+  soundengine = new Minim(this);
+  sonido2 = soundengine.loadSample("chicharra-error-incorrecto-.mp3", 1024);
+  
   
   for(int i = 0; i < images.length; i++){
    images[i] = loadImage("INICIOO_" + i + ".png"); 
@@ -144,6 +150,9 @@ void setup(){
   for(int i = 0; i < images5.length; i++){
    images5[i] = loadImage("SH ANIMADO_" + i + ".png"); 
   }
+  
+  mute = loadImage("mute.jpeg");
+  muteno = loadImage("muteno.jpeg");
   
   
   creditos = loadImage("credito fondo_0.png");
