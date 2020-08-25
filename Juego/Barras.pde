@@ -133,4 +133,11 @@ float pospapasfx, float pospapasfy, float posdonax, float posdonay){
     }
 }
 
+void gameover(){
+ if(vida <= 0){
+  
+   juego = 4;
+ }
+}
+
 }

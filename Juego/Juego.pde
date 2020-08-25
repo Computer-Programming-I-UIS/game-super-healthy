@@ -2,6 +2,7 @@ int juego = 0;
 boolean siguiente = false;
 boolean suma = false;
 boolean resta = false;
+boolean volver = false;
 
 PImage barra;
 
@@ -61,10 +62,15 @@ int ImageIndex = 0;
 
 PImage [] images = new PImage[maxImages];
 
-int maxImages2 = 120;
+int maxImages2 = 12;
 int ImageIndex2 = 0;
 
 PImage [] images2 = new PImage[maxImages2];
+
+int maxImages3 = 6;
+int ImageIndex3 = 0;
+
+PImage [] images3 = new PImage[maxImages3];
   
 float vida = 100;
 
@@ -100,16 +106,20 @@ void setup(){
   
   
   for(int i = 0; i < images.length; i++){
-   images[i] = loadImage("Inicio_" + i + ".png"); 
+   images[i] = loadImage("INICIOO_" + i + ".png"); 
   }
   
   for(int i = 0; i < images2.length; i++){
-   images2[i] = loadImage("Intrucciones_ " + i + ".png"); 
+   images2[i] = loadImage("instruccioness_" + i + ".png"); 
+  }
+  
+  for(int i = 0; i < images3.length; i++){
+   images3[i] = loadImage("Game Over_" + i + ".png"); 
   }
   
    barra = loadImage("vida2.png");
  
-   fondo2_1 = loadImage("instrucciones2.jpeg");
+   fondo2_1 = loadImage("2DAS INSTRUCCIONES_0.png");
    fondo3 = loadImage("colores.jpeg");
    
     p = loadImage("personaje-juego.png");
@@ -184,6 +194,7 @@ void setup(){
 
 void draw(){
 
+  println(volver);
   
   if(pa == true){
    
@@ -191,6 +202,7 @@ void draw(){
     inicio.comenzar();
  
       if(juego == 3){
+        frameRate(60);
         pj.display();
         
          if(sonido == true){
@@ -275,6 +287,7 @@ void draw(){
            fast[i].getPosPapasFX(), fast[i].getPosPapasFY(), fast[i].getPosDonaX(), fast[i].getPosDonaY());
         }
         
+        barras.gameover();
       }
       
   }
