@@ -43,10 +43,14 @@ class Barras {
     } 
     if(suma == true && vida <= 100){
          vida = vida + 0.2; 
+         
+         sonar = true;
+      if(sonar == true){
+    sonido1.trigger();
+    sonar = false;
      suma = false; 
     }
-    if(suma == true && vida <= 100){
-     vida = vida + 0.2; 
+   
     }
 }
 
@@ -59,11 +63,17 @@ void sumapuntoscereal(float posarrozx, float posarrozy, float pospastax, float p
     } 
     if(suma == true && vida <= 100){
          vida = vida + 0.2; 
+         
+         sonar = true;
+      if(sonar == true){
+    sonido1.trigger();
+    sonar = false;
      suma = false; 
     }
-    if(suma == true && vida <= 100){
-     vida = vida + 0.2; 
+         
+     suma = false; 
     }
+    
 }
 
 
@@ -75,11 +85,17 @@ void sumapuntosfrutas(float posmanx, float posmany, float posbrox, float posbroy
     } 
     if(suma == true && vida <= 100){
          vida = vida + 0.2; 
+         
+         sonar = true;
+      if(sonar == true){
+    sonido1.trigger();
+    sonar = false;
      suma = false; 
     }
-    if(suma == true && vida <= 100){
-     vida = vida + 0.2; 
+         
+     suma = false; 
     }
+    
 }
 
 void sumapuntoslacteos(float poslechex, float poslechey, float posquesox, float posquesoy, float posyogurtx, float posyogurty){
@@ -90,11 +106,17 @@ void sumapuntoslacteos(float poslechex, float poslechey, float posquesox, float 
     } 
     if(suma == true && vida <= 100){
          vida = vida + 0.2; 
+         
+         sonar = true;
+      if(sonar == true){
+    sonido1.trigger();
+    sonar = false;
      suma = false; 
     }
-    if(suma == true && vida <= 100){
-     vida = vida + 0.2; 
+         
+     suma = false; 
     }
+    
 }
 
 void sumapuntosazucares(float posagx, float posagy, float posmielx, float posmiely){
@@ -104,11 +126,15 @@ void sumapuntosazucares(float posagx, float posagy, float posmielx, float posmie
     } 
     if(suma == true && vida < 100){
          vida = vida + 0.2; 
+         
+         sonar = true;
+      if(sonar == true){
+    sonido1.trigger();
+    sonar = false;
      suma = false; 
     }
-    if(suma == true && vida < 100){
-     vida = vida + 0.2; 
-    }
+         }
+    
 }
 
 void bajapuntosfast(float poschox, float poschoy, float posdulx, float posduly, float pospizzax, float pospizzay, 
@@ -128,9 +154,7 @@ float pospapasfx, float pospapasfy, float posdonax, float posdonay){
          vida = vida - 0.2; 
      resta = false; 
     }
-    if(resta == true && vida >= 0){
-     vida = vida - 0.2; 
-    }
+   
 }
 
 void gameover(){

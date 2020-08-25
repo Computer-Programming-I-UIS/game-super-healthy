@@ -3,6 +3,7 @@ boolean siguiente = false;
 boolean suma = false;
 boolean resta = false;
 boolean volver = false;
+boolean sonar = false;
 
 PImage barra;
 
@@ -84,6 +85,10 @@ import ddf.minim.ugens.*;
 Minim minim;
 AudioPlayer player;
 
+Minim soundengine;
+AudioSample sonido1;
+AudioSample sonido2;
+
 Inicio inicio;
 PantallaJuego pj;
 Personaje per;
@@ -103,6 +108,9 @@ void setup(){
   
   minim = new Minim(this);
   player = minim.loadFile("cartoons-full.wav", 1024);
+  
+  soundengine = new Minim(this);
+  sonido1 = soundengine.loadSample("correct-ding.mp3", 1024);
   
   
   for(int i = 0; i < images.length; i++){
@@ -193,8 +201,6 @@ void setup(){
 }
 
 void draw(){
-
-  println(volver);
   
   if(pa == true){
    
