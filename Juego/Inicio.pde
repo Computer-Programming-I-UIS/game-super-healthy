@@ -13,8 +13,10 @@ class Inicio {
     ImageIndex = (ImageIndex+1) % images.length;
     if(sonido == true){
      image(mute, 371, 495); 
+     player3.play();
     }
-    if(sonido == true){
+    if(sonido == false){
+      player3.pause();
      image(muteno, 371, 495); 
     }
     

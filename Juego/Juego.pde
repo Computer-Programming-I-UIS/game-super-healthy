@@ -241,6 +241,8 @@ void draw(){
         frameRate(60);
         pj.display();
         
+        player3.pause();
+        
          if(sonido == true){
           player.play();
           image(off, 700, 10);
