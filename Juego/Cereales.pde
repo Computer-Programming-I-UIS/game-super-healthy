@@ -59,7 +59,7 @@ class Cereales {
   float getPosPastaX(){
    return pospastax;
   }
-  float getPosPastaY(){
+  float getPosPastaY(){ //
    return pospastay;
   }
   

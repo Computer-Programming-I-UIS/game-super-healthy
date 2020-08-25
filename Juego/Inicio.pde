@@ -21,8 +21,8 @@ class Inicio {
      juego = 5;
      
    }
-   
-   if(juego == 5){
+    
+   if(juego == 5){                 //guia
      frameRate(6);
     image(images4[ImageIndex4], 0, 0);
     ImageIndex4 = (ImageIndex4+1) % images4.length;
