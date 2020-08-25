@@ -129,6 +129,7 @@ class Inicio {
     volver = true;
     delay(50);
     if(volver == true){
+    frameCount = -1;
     juego = 0;
     vida = 100;
     volver = false;
