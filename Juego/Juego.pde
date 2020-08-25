@@ -58,20 +58,32 @@ boolean sonido = true;
 PImage on;
 PImage off;
 
-int maxImages = 17;
+int maxImages = 17;                         //inicio
 int ImageIndex = 0;
 
-PImage [] images = new PImage[maxImages];
+PImage [] images = new PImage[maxImages];   
 
-int maxImages2 = 12;
+int maxImages2 = 12;                       //instrucciones
 int ImageIndex2 = 0;
 
 PImage [] images2 = new PImage[maxImages2];
 
-int maxImages3 = 6;
+int maxImages3 = 6;                         //game over
 int ImageIndex3 = 0;
 
 PImage [] images3 = new PImage[maxImages3];
+
+int maxImages4 = 24;                         //guia
+int ImageIndex4 = 0;
+
+PImage [] images4 = new PImage[maxImages4];
+
+int maxImages5 = 6;                         //personaje guia
+int ImageIndex5 = 0;
+
+PImage [] images5 = new PImage[maxImages5];
+
+
   
 float vida = 100;
 
@@ -123,6 +135,14 @@ void setup(){
   
   for(int i = 0; i < images3.length; i++){
    images3[i] = loadImage("Game Over_" + i + ".png"); 
+  }
+  
+  for(int i = 0; i < images4.length; i++){
+   images4[i] = loadImage("GUIA_" + i + ".png"); 
+  }
+  
+  for(int i = 0; i < images5.length; i++){
+   images5[i] = loadImage("SH ANIMADO_" + i + ".png"); 
   }
   
    barra = loadImage("vida2.png");
