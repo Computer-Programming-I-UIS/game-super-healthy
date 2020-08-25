@@ -109,7 +109,7 @@ void sumapuntoslacteos(float poslechex, float poslechey, float posquesox, float 
 }
 
 void sumapuntosazucares(float posagx, float posagy, float posmielx, float posmiely){
-  if((posagx >= posx - 20 && posagy <= posx + 70 && posagy + 70 >= posy + 10 && posagy + 70 <= posy + 70) ||
+  if((posagx > posx - 20 && posagx < posx + 70 && posagy + 70 > posy + 10 && posagy + 70 < posy + 70) ||
     (posmielx > posx - 20 && posmielx < posx + 70 && posmiely + 70 > posy + 10 && posmiely + 70 < posy + 70)) {
       suma =!suma;
     } 
@@ -127,7 +127,7 @@ void sumapuntosazucares(float posagx, float posagy, float posmielx, float posmie
 void bajapuntosfast(float poschox, float poschoy, float posdulx, float posduly, float pospizzax, float pospizzay, 
 float poshamx, float poshamy, float posperrox, float posperroy, float posgaseosax, float posgaseosay,
 float pospapasfx, float pospapasfy, float posdonax, float posdonay){
-  if((poschox >= posx - 20 && poschoy <= posx + 70 && poschoy + 70 > posy + 10 && poschoy + 70 <= posy + 70) ||
+  if((poschox > posx - 20 && poschox < posx + 70 && poschoy + 70 > posy + 10 && poschoy + 70 < posy + 70) ||
     (posdulx > posx - 20 && posdulx < posx + 70 && posduly + 70 > posy + 10 && posduly + 70 < posy + 70) ||
     (pospizzax > posx - 20 && pospizzax < posx + 70 && pospizzay + 70 > posy + 10 && pospizzay + 70 < posy + 70) ||
     (poshamx > posx - 20 && poshamx < posx + 70 && poshamy + 70 > posy + 10 && poshamy + 70 < posy + 70) ||

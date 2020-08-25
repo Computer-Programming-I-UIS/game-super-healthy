@@ -53,7 +53,6 @@ boolean pa = true;
 PImage pausa;
 PImage play;
 
-
 boolean sonido = true;
 PImage on;
 PImage off;
@@ -92,7 +91,6 @@ float vida = 100;
 
 import ddf.minim.*;
 
-
 Minim minim;
 AudioPlayer player;
 AudioPlayer player2;
@@ -115,14 +113,13 @@ NoComer[] fast = new NoComer[5];
 Barras barras;
 
 void setup(){
-
   
   size(800, 600);
   
   minim = new Minim(this);
-  player = minim.loadFile("cartoons-full.wav");
+  player = minim.loadFile("fondojuego.mpeg");
   player2 = minim.loadFile("gameover.mp3");
-  player3 = minim.loadFile("awkward-adventure-full.wav");
+  player3 = minim.loadFile("fondoaudio1.mpeg");
   
   soundengine = new Minim(this);
   sonido1 = soundengine.loadSample("correct-ding.mp3", 1024);
@@ -153,7 +150,6 @@ void setup(){
   mute = loadImage("mute.jpeg");
   muteno = loadImage("muteno.jpeg");
   
-  
   creditos = loadImage("credito fondo_0.png");
    barra = loadImage("vida2.png");
  
@@ -161,7 +157,6 @@ void setup(){
    fondo3 = loadImage("colores.jpeg");
    
     p = loadImage("personaje-juego.png");
-    
     huevo = loadImage("comida-huevo4.png");
     pescado = loadImage("comida-pescado1.png");
     pollo = loadImage("comida-pollo1.png");
@@ -203,7 +198,6 @@ void setup(){
      per = new Personaje();
      barras = new Barras();
 
-   
    for (int i=0; i < prot.length; i++){
     prot[i] = new Proteina();
    }
@@ -229,7 +223,6 @@ void setup(){
    }
    
 }
-
 
 void draw(){
   
