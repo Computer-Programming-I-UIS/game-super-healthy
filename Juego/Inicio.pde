@@ -11,6 +11,12 @@ class Inicio {
         frameRate(6);
     image(images[ImageIndex], 0, 0);
     ImageIndex = (ImageIndex+1) % images.length;
+    if(sonido == true){
+     image(mute, 371, 495); 
+    }
+    if(sonido == true){
+     image(muteno, 371, 495); 
+    }
     
    
    }
@@ -34,11 +40,11 @@ class Inicio {
    
     if(juego == 5 && mouseX > 670 && mouseY > 509 && mousePressed && mouseX < 750 && mouseY < 549){
       siguiente = true;
-      delay(50);
+      
       if(siguiente == true){
     juego = 1;
     siguiente = false;
-    delay(90);
+    
       }
    }
    
@@ -97,6 +103,10 @@ class Inicio {
      frameRate(6);
     image(images3[ImageIndex3], 0, 0);
     ImageIndex3 = (ImageIndex3+1) % images3.length;
+    player.pause();
+    if(sonido == true){
+     player2.play(); 
+    }
    
    
    if(mouseX > 264 && mouseY > 204 && mouseX < 536 && mouseY < 233 && mousePressed){ 

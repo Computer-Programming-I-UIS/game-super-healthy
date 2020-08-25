@@ -91,14 +91,12 @@ PImage muteno;
 float vida = 100;
 
 import ddf.minim.*;
-import ddf.minim.analysis.*;
-import ddf.minim.effects.*;
-import ddf.minim.signals.*;
-import ddf.minim.spi.*;
-import ddf.minim.ugens.*;
+
 
 Minim minim;
 AudioPlayer player;
+AudioPlayer player2;
+AudioPlayer player3;
 
 Minim soundengine;
 AudioSample sonido1;
@@ -122,14 +120,15 @@ void setup(){
   size(800, 600);
   
   minim = new Minim(this);
-  player = minim.loadFile("cartoons-full.wav", 1024);
+  player = minim.loadFile("cartoons-full.wav");
+  player2 = minim.loadFile("gameover.mp3");
+  player3 = minim.loadFile("awkward-adventure-full.wav");
   
   soundengine = new Minim(this);
   sonido1 = soundengine.loadSample("correct-ding.mp3", 1024);
   
   soundengine = new Minim(this);
   sonido2 = soundengine.loadSample("chicharra-error-incorrecto-.mp3", 1024);
-  
   
   for(int i = 0; i < images.length; i++){
    images[i] = loadImage("INICIOO_" + i + ".png"); 
@@ -243,7 +242,7 @@ void draw(){
         pj.display();
         
          if(sonido == true){
-          player.play(); 
+          player.play();
           image(off, 700, 10);
          }
          if(sonido == false){
@@ -354,12 +353,19 @@ void mousePressed(){
     if(sonido == true){
       sonido = false;
       
-      
     }else{
       sonido = true;
-    
-      
     }
   }
   
+  if(juego == 0 && mouseX > 371 && mouseY > 495 && mousePressed && mouseX < 451 && mouseY < 525){
+    
+    if(sonido == true){
+      sonido = false;
+      
+    }else{
+      sonido = true;
+      
+    }
+  }
 }
