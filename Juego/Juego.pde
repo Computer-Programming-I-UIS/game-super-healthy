@@ -240,6 +240,9 @@ void draw(){
          if(sonido == true){
           player.play();
           image(off, 700, 10);
+          if(player.isPlaying() == false){
+            player.play();
+          }
          }
          if(sonido == false){
           player.pause(); 
