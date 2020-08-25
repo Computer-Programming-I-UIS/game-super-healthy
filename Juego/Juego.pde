@@ -83,7 +83,7 @@ int ImageIndex5 = 0;
 
 PImage [] images5 = new PImage[maxImages5];
 
-
+PImage creditos;
   
 float vida = 100;
 
@@ -145,6 +145,8 @@ void setup(){
    images5[i] = loadImage("SH ANIMADO_" + i + ".png"); 
   }
   
+  
+  creditos = loadImage("credito fondo_0.png");
    barra = loadImage("vida2.png");
  
    fondo2_1 = loadImage("2DAS INSTRUCCIONES_0.png");

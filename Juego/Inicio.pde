@@ -25,7 +25,9 @@ class Inicio {
    if(juego == 5){                 //guia
      frameRate(6);
     image(images4[ImageIndex4], 0, 0);
-    ImageIndex4 = (ImageIndex4+1) % images4.length;
+    if(ImageIndex4 < maxImages4 -1 ){
+    ImageIndex4 = (ImageIndex4+1);
+    }
     image(images5[ImageIndex5], 0, 0);
     ImageIndex5 = (ImageIndex5+1) % images5.length;
    }
@@ -35,6 +37,26 @@ class Inicio {
       delay(50);
       if(siguiente == true){
     juego = 1;
+    siguiente = false;
+    delay(90);
+      }
+   }
+   
+   if(juego == 0 && mousePressed && mouseX > 345 && mouseY > 446  && mouseX < 478 && mouseY < 466){
+     juego = 6;
+     
+   }
+   
+   if(juego == 6){                 //creditos
+     frameRate(6);
+    image(creditos, 0, 0);
+   }
+   
+    if(juego == 6 && mouseX > 51 && mouseY > 547 && mousePressed && mouseX < 131 && mouseY < 586){
+      siguiente = true;
+      delay(50);
+      if(siguiente == true){
+    juego = 0;
     siguiente = false;
     delay(90);
       }
