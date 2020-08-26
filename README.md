@@ -30,7 +30,8 @@ Es necesaria la instalación de la libreria "Minim"**
     - Se muestra un botón con una flecha que representa "siguiente".
     
      ![./instrucciones1pequeña.png](./instrucciones1pequeña.png)
-     ![./instrucciones2pequeña.png](./iinstrucciones2pequeña.png)
+     
+     ![./instrucciones2pequeña.png](./instrucciones2pequeña.png)
 
 6. Al presionar "siguiente" se muestra la segunda parte de las instrucciones.
    - Se muestra la comida a "evitar" que el personaje no debería consumir.
