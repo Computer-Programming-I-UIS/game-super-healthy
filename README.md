@@ -1,6 +1,9 @@
 # SUPER HEALTHY
 
 Este es un vídeojuego en el que el usuario debe hacer que el personaje coma comida sana para subir puntos, desarrollado en processing 3.
+
+
+
 **Es necesaria la instalación de la libreria "Minim"****
 ---
 ![./PantallaJuego1.png](./superhealthy1.jpeg)
