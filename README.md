@@ -1,6 +1,6 @@
 # SUPER HEALTHY
 
-Este es un vídeojuego en el que el usuario debe hacer que el personaje coma comida sana para subir puntos, desarrollado en processing 3.
+Este es un vídeojuego en el que el usuario debe hacer que el personaje consuma alimentos sanos para evitar que la 'vida' del personaje llegue a 0, desarrollado en processing 3.
 
 
 
