@@ -1,6 +1,6 @@
 # SUPER HEALTHY
 
-Este es un vídeojuego en el que el usuario debe hacer que el personaje consuma alimentos sanos para evitar que la 'vida' del personaje llegue a 0, desarrollado en processing 3.
+Este es un vídeojuego educativo y para todo publico en el que el usuario debe hacer que el personaje consuma alimentos sanos para evitar que la 'vida' del personaje llegue a 0, desarrollado en processing 3.
 
 
 
@@ -52,6 +52,8 @@ Es necesaria la instalación de la libreria "Minim"**
    - Se muestra un botón "salir" para volver al inicio.
    
    ![./GameOverGrande.png](./GameOverGrande.png)
+   
+9. Es un videojuego educativo y apto para todo publico.
 
 ###### Autores:
 - Dayanna Navarro.
