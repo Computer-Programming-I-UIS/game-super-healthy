@@ -115,6 +115,9 @@ Lacteos[] lac = new Lacteos[3];
 Azucares[] azu = new Azucares[3];
 NoComer[] fast = new NoComer[5];
 
+
+
+
 Barras barras;
 
 void setup(){
@@ -122,9 +125,9 @@ void setup(){
   size(800, 600);
   
   minim = new Minim(this);                                               //sonnidos guardarlos en las variables
-  player = minim.loadFile("fondojuego_04.mp3");
+  player = minim.loadFile("Stargazing.mp3");
   player2 = minim.loadFile("gameover.mp3");
-  player3 = minim.loadFile("fondoaudio1_01_01.mp3");
+  player3 = minim.loadFile("Adventure.mp3");
   
   soundengine = new Minim(this);
   sonido1 = soundengine.loadSample("correct-ding.mp3", 1024);
@@ -329,7 +332,6 @@ void draw(){
         
         barras.gameover();                                          //cuando se pierde(puntos llegan a 0)
       }
-      
   }
 }
 
@@ -369,7 +371,6 @@ void mousePressed(){                                      //botones para pausar/
       
     }else{
       sonido = true;
-      
     }
   }
 }
