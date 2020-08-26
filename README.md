@@ -4,7 +4,8 @@ Este es un vídeojuego en el que el usuario debe hacer que el personaje coma com
 
 
 
-**Es necesaria la instalación de la libreria "Minim"****
+Es necesaria la instalación de la libreria "Minim"**
+
 ---
 ![./PantallaJuego1.png](./superhealthy1.jpeg)
 
