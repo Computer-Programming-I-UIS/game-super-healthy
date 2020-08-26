@@ -1,6 +1,6 @@
-class Lacteos {
+class Lacteos {                              //clase para los alimentos pertenecientes al grupo alimenticio lacteos
   
-  float poslx = int(random(0, 10))*100;
+  float poslx = int(random(0, 10))*100;                  //variables
   float posly = int(random(-40, 0))*100;
   float posqx = int(random(0, 10))*100;
   float posqy = int(random(-40, 0))*100;
@@ -12,14 +12,14 @@ class Lacteos {
     
   }
   
-  void display(){
+  void display(){                          //se muestras
    
     image(leche, poslx, posly);
     image(queso, posqx, posqy);
     image(yogurt, posyx, posyy);
   }
   
-  void move(){
+  void move(){                     //se mueven
    
     posly += vell;
     posqy += vell;
@@ -27,7 +27,7 @@ class Lacteos {
     
   }
   
-  void reaparecer(){
+  void reaparecer(){                 //reaparecer cuando salen de pantalla
     
     if(posly > height){
     posly = int(random(-34, -32))*100;
@@ -44,7 +44,7 @@ class Lacteos {
    
   }
   
-  float getPosLecheX(){
+  float getPosLecheX(){                       //guardar variables de posición
    return poslx;
   }
   float getPosLecheY(){

@@ -1,4 +1,4 @@
-class PantallaJuego{
+class PantallaJuego{                    //clase fondo de la pantalla de juego
   
  PantallaJuego(){
    

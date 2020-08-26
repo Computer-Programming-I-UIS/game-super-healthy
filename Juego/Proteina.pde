@@ -1,6 +1,6 @@
-class Proteina {
+class Proteina {                                   //clase para los alimentos pertenecientes al grupo alimenticio proteinas
   
-  float poshx = int(random(0, 8))*100;
+  float poshx = int(random(0, 8))*100;             //variables
   float poshy = int(random(-40, 0))*100;
   float pospezx = int(random(0, 8))*100;
   float pospezy = int(random(-40, 0))*100;
@@ -13,9 +13,7 @@ class Proteina {
   Proteina(){
   }
   
-  void display(){
-   
-    
+  void display(){                //se muestra
     
     image(huevo, poshx, poshy);
     image(pescado, pospezx, pospezy);
@@ -24,7 +22,7 @@ class Proteina {
     
   }
   
-  void move(){
+  void move(){                    //se mueve
   
     poshy += velh;
     pospezy += velh;
@@ -33,7 +31,7 @@ class Proteina {
     
   }
   
-  void reaparecer(){
+  void reaparecer(){                         //reaparecer cuando salen de la pantalla
    if(poshy > height){
     poshy = int(random(-34, -32))*100;
     poshx = int(random(0, 8))*100;
@@ -52,7 +50,7 @@ class Proteina {
    }
   }
   
-  float getPosHuevoX(){
+  float getPosHuevoX(){                    //guardar variables de posición
    return poshx;
   }
   float getPosHuevoY(){

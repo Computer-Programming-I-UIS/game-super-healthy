@@ -1,11 +1,16 @@
-int juego = 0;
-boolean siguiente = false;
+/*VIDEO JUEGO: SUPER HEALTHY, se debe comer saludable
+
+Dayanna Navarrro
+Nestor Andrés Galvis*/
+
+int juego = 0;                                        //Declaración de las variables a usar
+boolean siguiente = false;                            //de pantallla y boolean
 boolean suma = false;
 boolean resta = false;
 boolean volver = false;
 boolean sonar = false;
 
-PImage barra;
+PImage barra;                                         //imagenes a usar
 
 PImage fondo1;
 PImage personajeinicio;
@@ -57,7 +62,7 @@ boolean sonido = true;
 PImage on;
 PImage off;
 
-int maxImages = 17;                         //inicio
+int maxImages = 17;                         //inicio                              //animaciones
 int ImageIndex = 0;
 
 PImage [] images = new PImage[maxImages];   
@@ -82,17 +87,17 @@ int ImageIndex5 = 0;
 
 PImage [] images5 = new PImage[maxImages5];
 
-PImage creditos;
+PImage creditos;                                  //imagenes auxiliares
   
 PImage mute;
 PImage muteno;
 
 float vida = 100;
 
-import ddf.minim.*;
+import ddf.minim.*;                               //minim para el sonido
 
 Minim minim;
-AudioPlayer player;
+AudioPlayer player;                               //declaración de sonidos, guardarlos en variables
 AudioPlayer player2;
 AudioPlayer player3;
 
@@ -100,7 +105,7 @@ Minim soundengine;
 AudioSample sonido1;
 AudioSample sonido2;
 
-Inicio inicio;
+Inicio inicio;                                          //objetos y arrays de objetos(comida que cae)
 PantallaJuego pj;
 Personaje per;
 Proteina[] prot = new Proteina[2];
@@ -116,7 +121,7 @@ void setup(){
   
   size(800, 600);
   
-  minim = new Minim(this);
+  minim = new Minim(this);                                               //sonnidos guardarlos en las variables
   player = minim.loadFile("fondojuego_04.mp3");
   player2 = minim.loadFile("gameover.mp3");
   player3 = minim.loadFile("fondoaudio1_01_01.mp3");
@@ -127,7 +132,7 @@ void setup(){
   soundengine = new Minim(this);
   sonido2 = soundengine.loadSample("chicharra-error-incorrecto-.mp3", 1024);
   
-  for(int i = 0; i < images.length; i++){
+  for(int i = 0; i < images.length; i++){                                              //animaciones
    images[i] = loadImage("INICIOO_" + i + ".png"); 
   }
   
@@ -147,7 +152,7 @@ void setup(){
    images5[i] = loadImage("SH ANIMADO_" + i + ".png"); 
   }
   
-  mute = loadImage("mute.jpeg");
+  mute = loadImage("mute.jpeg");                                                //guardar imagenes en variables
   muteno = loadImage("muteno.jpeg");
   
   creditos = loadImage("FONDO CREDITOS_0.png");
@@ -193,12 +198,12 @@ void setup(){
     on = loadImage("on.png");
     off = loadImage("off.png");
      
-     inicio = new Inicio();
+     inicio = new Inicio();                                                         //clases
      pj = new PantallaJuego();
      per = new Personaje();
      barras = new Barras();
 
-   for (int i=0; i < prot.length; i++){
+   for (int i=0; i < prot.length; i++){                                            //clases de las comidas en arrays
     prot[i] = new Proteina();
    }
    
@@ -224,22 +229,22 @@ void setup(){
    
 }
 
-void draw(){
+void draw(){                          
   
-  if(pa == true){
+  if(pa == true){                                    //si no está pausado
    
-    inicio.display();
+    inicio.display();                                //corre con normalidad
     inicio.comenzar();
  
-      if(juego == 3){
+      if(juego == 3){                                //pantalla de juego
         frameRate(60);
         pj.display();
         
-        player3.pause();
+        player3.pause();                             //se muestra la pantalla de juego, se para el audio anterior
         
-         if(sonido == true){
+         if(sonido == true){                        //reproduce el siguiente audio
           player.play();
-          image(off, 700, 10);
+          image(off, 700, 10);                      //imagen de mute o sonido
           if(player.isPlaying() == false){
             player.play();
           }
@@ -250,7 +255,7 @@ void draw(){
          }
          
         
-        for(int i = 0; i < prot.length; i++){
+        for(int i = 0; i < prot.length; i++){                 //comidas que caen
            prot[i].display();
            prot[i].move();
            prot[i].reaparecer();
@@ -285,13 +290,13 @@ void draw(){
            fast[i].move();
            fast[i].reaparecer();
         }
+         
+        per.display();                                                            //se muestra al personaje y su movimiento 
+        per.move(); 
         
-        per.display();
-        per.move();
+        barras.display();                                                         //se muestra la barra superior
         
-        barras.display();
-        
-        for(int i = 0; i < prot.length; i++){
+        for(int i = 0; i < prot.length; i++){                                                                                   //sumar puntos tomando valores de posicion de las comidas
           barras.vidasumaprot(prot[i].getPosHuevoX(),prot[i].getPosHuevoY(),prot[i].getPosPezX(),prot[i].getPosPezY(),
           prot[i].getPosPolloX(),prot[i].getPosPolloY(),prot[i].getPosFileteX(),prot[i].getPosFileteY());
         }
@@ -322,42 +327,42 @@ void draw(){
            fast[i].getPosPapasFX(), fast[i].getPosPapasFY(), fast[i].getPosDonaX(), fast[i].getPosDonaY());
         }
         
-        barras.gameover();
+        barras.gameover();                                          //cuando se pierde(puntos llegan a 0)
       }
       
   }
 }
 
-void mousePressed(){
+void mousePressed(){                                      //botones para pausar/play al juego y para mute/sonido
   
-  if(juego == 3 && mouseX > 700 && mouseY > 10 && mousePressed && mouseX < 780 && mouseY < 40){
+  if(juego == 3 && mouseX > 700 && mouseY > 10 && mousePressed && mouseX < 780 && mouseY < 40){     //si esta en la pantalla de juego y se presiona el boton de pausa
     
-    if(pa == true){
-      pa = false;
-      image(play, 700, 10);
+    if(pa == true){                                   
+      pa = false;                           //el juego se pausa
+      image(play, 700, 10);                  //cambia el boton
       delay(70);
       
-      if(player.isPlaying()){
+      if(player.isPlaying()){                  //para la musica
        player.pause(); 
       }
     }else{
-      pa = true;
+      pa = true;                            //si se da play, se pone la imagen del boton de pausa
       image(pausa, 700, 10);
       delay(70);
     }
   }
   
-  if(juego == 3 && mouseX > 600 && mouseY > 10 && mousePressed && mouseX < 680 && mouseY < 40){
+  if(juego == 3 && mouseX > 600 && mouseY > 10 && mousePressed && mouseX < 680 && mouseY < 40){                //si se está en la pantalla de juego y se presiona el boton para mute
     
-    if(sonido == true){
+    if(sonido == true){            //cambia la b=varaiable de la que depende el sonido
       sonido = false;
       
     }else{
-      sonido = true;
+      sonido = true;              
     }
   }
   
-  if(juego == 0 && mouseX > 371 && mouseY > 495 && mousePressed && mouseX < 451 && mouseY < 525){
+  if(juego == 0 && mouseX > 371 && mouseY > 495 && mousePressed && mouseX < 451 && mouseY < 525){                       //si se está en inicio y se quiere mutear
     
     if(sonido == true){
       sonido = false;

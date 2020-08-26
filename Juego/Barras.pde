@@ -1,29 +1,29 @@
-class Barras {
+class Barras {                                    //clase para la barra d ela parte superior
   
  Barras(){
    
  }
   
   
-  void display(){
+  void display(){                                //se muestra
    
     noStroke();
     fill(#CBC5C5);
     rect(0, 0, 800, 50);
     
-    image(pausa, 700, 10);
+    image(pausa, 700, 10);             //imagen de pausa
     
     
-     if(sonido){
-      player.play(); 
-      image(off, 600, 10);
+     if(sonido){                 //si el sonido es true
+      player.play();                   //suena el audio
+      image(off, 600, 10);               //se mustra la imagen de mute
      }
      else{
-      player.pause();
-      image(on, 600, 10);
+      player.pause();               //si es falso, se pausa el audio
+      image(on, 600, 10);             //se muestra la imagen de sonido
      }
     
-    if(vida >= 0){
+    if(vida >= 0){                                    //la barra de vida va bajando
     vida = vida - 0.03;
     }
     fill(255);
@@ -34,7 +34,7 @@ class Barras {
     
   }
   
-  void vidasumaprot(float poshuevox, float poshuevoy, float pospezx, float pospezy, float pospollox, float pospolloy, float posfiletex, float posfiletey){
+  void vidasumaprot(float poshuevox, float poshuevoy, float pospezx, float pospezy, float pospollox, float pospolloy, float posfiletex, float posfiletey){   //la vida sube si se consumen alimentos sanos
     if((poshuevox > posx - 20 && poshuevox < posx + 70 && poshuevoy + 70 > posy + 10 && poshuevoy + 70 < posy + 70) ||
     (pospezx > posx - 20 && pospezx < posx + 70 && pospezy + 70 > posy + 10 && pospezy + 70 < posy + 70) || 
     (pospollox > posx - 20 && pospollox < posx + 70 && pospolloy + 70 > posy + 10 && pospolloy + 70 < posy + 70) ||
@@ -44,7 +44,7 @@ class Barras {
     if(suma == true && vida <= 100){
          vida = vida + 0.2; 
          
-        if(sonido == true){
+        if(sonido == true){                 //y si el sonido es true, suena
     sonido1.trigger();
         }
      suma = false; 
@@ -124,7 +124,7 @@ void sumapuntosazucares(float posagx, float posagy, float posmielx, float posmie
     
 }
 
-void bajapuntosfast(float poschox, float poschoy, float posdulx, float posduly, float pospizzax, float pospizzay, 
+void bajapuntosfast(float poschox, float poschoy, float posdulx, float posduly, float pospizzax, float pospizzay,                  //lavida baja si se consumen alimentos malos
 float poshamx, float poshamy, float posperrox, float posperroy, float posgaseosax, float posgaseosay,
 float pospapasfx, float pospapasfy, float posdonax, float posdonay){
   if((poschox > posx - 20 && poschox < posx + 70 && poschoy + 70 > posy + 10 && poschoy + 70 < posy + 70) ||
@@ -138,8 +138,8 @@ float pospapasfx, float pospapasfy, float posdonax, float posdonay){
       resta =!resta;
     } 
     if(resta == true && vida >= 0){
-         vida = vida - 0.2; 
-         if(sonido == true){
+         vida = vida - 0.2;                         
+         if(sonido == true){                            //y si el sonido es true, suena
           sonido2.trigger(); 
          }
      resta = false; 
@@ -147,7 +147,7 @@ float pospapasfx, float pospapasfy, float posdonax, float posdonay){
    
 }
 
-void gameover(){
+void gameover(){                  //cuando la vida llega a 0 
  if(vida <= 0){
   
    juego = 4;

@@ -1,6 +1,6 @@
-class Azucares {
+class Azucares {                                                 //clase para los alimentos que pertenecen al grupo alimenticio grasas y azucares
   
-  float posagx = int(random(0, 10))*100;
+  float posagx = int(random(0, 10))*100;               //variables
   float posagy = int(random(-40, 0))*100;
   float posmix  = int(random(0, 10))*100;
   float posmiy = int(random(-40, 0))*100;
@@ -9,7 +9,7 @@ class Azucares {
   Azucares(){
   }
   
-  void display(){
+  void display(){                        //se muestra
    
     image(aguacate, posagx, posagy);
     image(miel, posmix, posmiy);
@@ -18,12 +18,12 @@ class Azucares {
   
   void move(){
    
-    posagy += velc;
+    posagy += velc;                      //se mueven
     posmiy += velc;
     
   }
-  
-  void reaparecer(){
+   
+  void reaparecer(){                       //que reaparezcan al salir de la pantalla
 
     if(posagy > height){
     posagy = int(random(-34, -32))*100;
@@ -36,7 +36,7 @@ class Azucares {
 
   }
   
-  float getPosAguacateX(){
+  float getPosAguacateX(){                      // guardar las posiciones
    return posagx;
   }
   float getPosAguacateY(){

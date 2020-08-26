@@ -1,7 +1,7 @@
-class Frutas {
-  
-  float posmx = int(random(0, 10))*100;
-  float posmy = int(random(-40, 0))*100;
+class Frutas {                         //clase para los alimentos pertenecientes a el grupo alimenticio frutas y verduras
+   
+  float posmx = int(random(0, 10))*100;            //variables
+  float posmy = int(random(-40, 0))*100; 
   float posbrox = int(random(0, 10))*100;
   float posbroy = int(random(-40, 0))*100;
   float posbax = int(random(0, 10))*100;
@@ -11,21 +11,21 @@ class Frutas {
   Frutas(){
   }
   
-  void display(){
+  void display(){                             //mostrar
    
     image(manzana, posmx, posmy);
     image(brocoli, posbrox, posbroy);
     image(banano, posbax, posbay);
   }
   
-  void move(){
+  void move(){                    //mover
    
     posmy += velm;
     posbroy += velm;
     posbay += velm;
   }
   
-  void reaparecer(){
+  void reaparecer(){             //reaparecer cuando sale de pantalla
    
     if(posmy > height){
     posmy = int(random(-34, -32))*100;
@@ -42,7 +42,7 @@ class Frutas {
    
   }
   
- float getPosManzanaX(){
+ float getPosManzanaX(){                      //guardar variables de posición
    return posmx;
   }
   float getPosManzanaY(){

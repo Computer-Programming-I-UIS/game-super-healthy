@@ -1,6 +1,6 @@
-class NoComer {
+class NoComer {                            //clase para los alimentos dañinos
   
-  float poschocolatex  = int(random(0, 10))*100;
+  float poschocolatex  = int(random(0, 10))*100;            //variables
   float poschocolatey = int(random(-40, 0))*100;
   float posdulcex = int(random(0, 10))*100;
   float posdulcey = int(random(-40, 0))*100;
@@ -21,7 +21,7 @@ class NoComer {
   NoComer(){
   }
   
-  void display(){
+  void display(){                   //se muestra
    
     image(chocolate, poschocolatex, poschocolatey);
     image(dulce, posdulcex, posdulcey);
@@ -33,7 +33,7 @@ class NoComer {
     image(dona, posdonax, posdonay);   
   }
   
-  void move(){
+  void move(){                   //se mueven
    
     poschocolatey += velc;
     posdulcey += velc;
@@ -46,7 +46,7 @@ class NoComer {
     
   }
   
-  void reaparecer(){
+  void reaparecer(){               //reaparecen al salir de pantalla
    
     if(poschocolatey > height){
     poschocolatey = int(random(-34, -32))*100;
@@ -82,7 +82,7 @@ class NoComer {
    }
   }
   
-  float getPosChocolateX(){
+  float getPosChocolateX(){                         //guardar variables de posición
    return poschocolatex;
   }
   float getPosChocolateY(){

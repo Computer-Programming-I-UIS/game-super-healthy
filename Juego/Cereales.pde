@@ -1,6 +1,6 @@
-class Cereales {
+class Cereales {                               //clase para los alimentos pertenecientes al grupo alimenticio cereales
   
-  float posax = int(random(0, 10))*100;
+  float posax = int(random(0, 10))*100;                 //variables
   float posay = int(random(-40, 0))*100;
   float pospastax = int(random(0, 10))*100;
   float pospastay = int(random(-40, 0))*100;
@@ -13,7 +13,7 @@ class Cereales {
   Cereales(){
   }
   
-  void display(){
+  void display(){                 //se muestra
    
     image(arroz, posax, posay);
     image(pasta, pospastax, pospastay);
@@ -21,7 +21,7 @@ class Cereales {
     image(pan, pospanx, pospany);
   }
   
-  void move(){
+  void move(){                 //se mueve
    
     posay += vela;
     pospastay += vela;
@@ -30,7 +30,7 @@ class Cereales {
     
   }
   
-  void reaparecer(){
+  void reaparecer(){                //reaparece cuando sale de pantalla
    if(posay > height){
     posay = int(random(-34, -32))*100;
     posax = int(random(0, 8))*100;
@@ -49,7 +49,7 @@ class Cereales {
    }
   }
   
-  float getPosArrozX(){
+  float getPosArrozX(){                  //guardar variables de posicion
    return posax;
   }
   float getPosArrozY(){
