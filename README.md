@@ -40,9 +40,12 @@ Es necesaria la instalación de la libreria "Minim"**
    - Se muestra un botón "Pausa" para pausar el juego, y se muestra en su lugar un botón de "play" para reanudar el juego.
  
 8. Si la vida llega a "0" por dejar de consumir alimentos saludables o por consumir alimentos dañinos:
-   -Se muestra una iamgen del personaje con "x" en lugar sus ojos.
+   -Se muestra una iamgen del personaje con "x" en lugar sus ojos. 
+   
    -Si el sonido está activado se reproduce un audio característico de "game over".
+   
    -Se muestra un botón intermitente "volver a intentarlo" para reanudar el juego.
+   
    -Se muestra un botón "salir" para volver al inicio.
 
 ###### Autores:
