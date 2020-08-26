@@ -246,8 +246,9 @@ void draw(){
         player3.pause();                             //se muestra la pantalla de juego, se para el audio anterior
         
          if(sonido == true){                        //reproduce el siguiente audio
+          image(off, 600, 10);   
           player.play();
-          image(off, 700, 10);                      //imagen de mute o sonido
+          image(off, 600, 10);                      //imagen de mute o sonido
           if(player.isPlaying() == false){
             player.play();
           }
@@ -357,6 +358,7 @@ void mousePressed(){                                      //botones para pausar/
   if(juego == 3 && mouseX > 600 && mouseY > 10 && mousePressed && mouseX < 680 && mouseY < 40){                //si se está en la pantalla de juego y se presiona el boton para mute
     
     if(sonido == true){            //cambia la b=varaiable de la que depende el sonido
+     
       sonido = false;
       
     }else{

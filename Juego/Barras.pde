@@ -12,7 +12,12 @@ class Barras {                                    //clase para la barra d ela pa
 
     image(pausa, 700, 10);             //imagen de pausa
 
-
+if(juego == 3 && sonido ==true){
+  image(off, 600, 10);   
+}
+if(juego == 3 && sonido ==false){
+  image(on, 600, 10);   
+}
     if (sonido) {                 //si el sonido es true
       if (!player.isPlaying()) {
         player.rewind();
