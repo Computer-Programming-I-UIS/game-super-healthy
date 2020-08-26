@@ -117,9 +117,9 @@ void setup(){
   size(800, 600);
   
   minim = new Minim(this);
-  player = minim.loadFile("fondojuego.mpeg");
+  player = minim.loadFile("fondojuego_04.mp3");
   player2 = minim.loadFile("gameover.mp3");
-  player3 = minim.loadFile("fondoaudio1.mpeg");
+  player3 = minim.loadFile("fondoaudio1_01_01.mp3");
   
   soundengine = new Minim(this);
   sonido1 = soundengine.loadSample("correct-ding.mp3", 1024);
@@ -150,7 +150,7 @@ void setup(){
   mute = loadImage("mute.jpeg");
   muteno = loadImage("muteno.jpeg");
   
-  creditos = loadImage("credito fondo_0.png");
+  creditos = loadImage("FONDO CREDITOS_0.png");
    barra = loadImage("vida2.png");
  
    fondo2_1 = loadImage("2DAS INSTRUCCIONES_0.png");
