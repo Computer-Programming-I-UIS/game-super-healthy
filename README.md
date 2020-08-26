@@ -22,10 +22,15 @@ Es necesaria la instalación de la libreria "Minim"**
 
 4. Al hacer click en "PLAY" se muestra una animación del peronaje principal dando indicaciones sobre una dieta balanceada y una ilustración que muestra los cinco principlaes grupos alimenticios.
     - Se muestra una botón con una flecha que representa "siguiente".
+    
+    ![./GUIAGRANDE.png](./GUIAGRANDE.png)
 
 5. Al presionar "siguiente" se muestran las instrucciones de juego con una animación del personaje moviendose al mover las flechas del teclado.
     - Se muestra la comida "sana" que el personaje debería consumir.
     - Se muestra un botón con una flecha que representa "siguiente".
+    
+     ![./instrucciones1pequeña.png](./instrucciones1pequeña.png)
+     ![./instrucciones2pequeña.png](./iinstrucciones2pequeña.png)
 
 6. Al presionar "siguiente" se muestra la segunda parte de las instrucciones.
    - Se muestra la comida a "evitar" que el personaje no debería consumir.
@@ -45,6 +50,8 @@ Es necesaria la instalación de la libreria "Minim"**
    - Si el sonido está activado se reproduce un audio característico de "game over".
    - Se muestra un botón intermitente "volver a intentarlo" para reanudar el juego.
    - Se muestra un botón "salir" para volver al inicio.
+   
+   ![./GameOverGrande.png](./GameOverGrande.png)
 
 ###### Autores:
 - Dayanna Navarro.
