@@ -12,8 +12,8 @@ class Inicio {                    //clase para determinar las pantallas(los fond
       ImageIndex = (ImageIndex+1) % images.length;
       if (sonido == true) {                                   //muestra el boton correspondiente de audio dependiendo de la boolean, sonido
         image(mute, 371, 495); 
-        if (!player.isPlaying()) {
-        player.rewind();
+        if (!player3.isPlaying()) {
+        player3.rewind();
           player3.play();
         }
       }
