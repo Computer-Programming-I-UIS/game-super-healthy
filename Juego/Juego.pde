@@ -260,7 +260,6 @@ void draw(){
         frameRate(60);
         pj.display();
         pj.puntos();
-        println(int(puntaje));
         player3.pause();                             //se muestra la pantalla de juego, se para el audio anterior
         
          if(sonido == true){                        //reproduce el siguiente audio

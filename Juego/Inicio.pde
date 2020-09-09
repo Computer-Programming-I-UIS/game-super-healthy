@@ -98,6 +98,8 @@ class Inicio {                    //clase para determinar las pantallas(los fond
       image(images3[ImageIndex3], 0, 0);
       ImageIndex3 = (ImageIndex3+1) % images3.length;
       image(botonmenu, 375, 520);
+      textSize(20);
+      text("PUNTAJE: " + int(puntaje), 400, 170); 
       player.pause();
       if (sonido == true) {
         player2.play();
