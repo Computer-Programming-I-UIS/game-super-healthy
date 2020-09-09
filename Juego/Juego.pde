@@ -50,6 +50,9 @@ PImage gaseosa;
 PImage papasfritas;
 PImage dona;
 
+PImage agua;
+PImage pesa;
+
 float posx = 350;
 float posy = 500;
 
@@ -61,6 +64,7 @@ PImage play;
 boolean sonido = true;
 PImage on;
 PImage off;
+PImage botonmenu;
 
 int maxImages = 17;                         //inicio                              //animaciones
 int ImageIndex = 0;
@@ -92,7 +96,11 @@ PImage creditos;                                  //imagenes auxiliares
 PImage mute;
 PImage muteno;
 
+PFont fuente;
+
 float vida = 100;
+
+float puntaje = 0;  
 
 import ddf.minim.*;                               //minim para el sonido
 
@@ -114,9 +122,7 @@ Frutas[] fru = new Frutas[3];
 Lacteos[] lac = new Lacteos[3];
 Azucares[] azu = new Azucares[3];
 NoComer[] fast = new NoComer[5];
-
-
-
+Agua[] ag = new Agua[3];
 
 Barras barras;
 
@@ -134,6 +140,8 @@ void setup(){
   
   soundengine = new Minim(this);
   sonido2 = soundengine.loadSample("chicharra-error-incorrecto-.mp3", 1024);
+  
+  fuente = createFont("Minecraft.ttf", 40);
   
   for(int i = 0; i < images.length; i++){                                              //animaciones
    images[i] = loadImage("INICIOO_" + i + ".png"); 
@@ -160,6 +168,8 @@ void setup(){
   
   creditos = loadImage("FONDO CREDITOS_0.png");
    barra = loadImage("vida2.png");
+ 
+   botonmenu = loadImage("botonmenu1.png");
  
    fondo2_1 = loadImage("2DAS INSTRUCCIONES_0.png");
    fondo3 = loadImage("colores.jpeg");
@@ -194,6 +204,9 @@ void setup(){
     gaseosa = loadImage("comida-gaseosa1.png");
     papasfritas = loadImage("comida-papasf1.png");
     dona = loadImage("comida-dona1.png");
+    
+    agua = loadImage("agua2.png");
+    pesa = loadImage("pesa1.png");
     
     pausa = loadImage("pausa.png");
     play = loadImage("play.png");
@@ -230,6 +243,10 @@ void setup(){
     fast[i] = new NoComer();
    }
    
+   for (int i=0; i < ag.length; i++){
+    ag[i] = new Agua();
+   }
+   
 }
 
 void draw(){                          
@@ -242,7 +259,8 @@ void draw(){
       if(juego == 3){                                //pantalla de juego
         frameRate(60);
         pj.display();
-        
+        pj.puntos();
+        println(int(puntaje));
         player3.pause();                             //se muestra la pantalla de juego, se para el audio anterior
         
          if(sonido == true){                        //reproduce el siguiente audio
@@ -294,11 +312,19 @@ void draw(){
            fast[i].move();
            fast[i].reaparecer();
         }
+        
+        for(int i = 0; i < ag.length; i++){
+           ag[i].display();
+           ag[i].move();
+           ag[i].reaparecer();
+        }
          
         per.display();                                                            //se muestra al personaje y su movimiento 
         per.move(); 
         
         barras.display();                                                         //se muestra la barra superior
+        
+        pj.puntosmostrar();
         
         for(int i = 0; i < prot.length; i++){                                                                                   //sumar puntos tomando valores de posicion de las comidas
           barras.vidasumaprot(prot[i].getPosHuevoX(),prot[i].getPosHuevoY(),prot[i].getPosPezX(),prot[i].getPosPezY(),
@@ -329,6 +355,10 @@ void draw(){
            fast[i].getPosPizzaX(), fast[i].getPosPizzaY(), fast[i].getPosHamburguesaX(), fast[i].getPosHamburguesaY(),
            fast[i].getPosPerroX(), fast[i].getPosPerroY(), fast[i].getPosGaseosaX(), fast[i].getPosGaseosaY(),
            fast[i].getPosPapasFX(), fast[i].getPosPapasFY(), fast[i].getPosDonaX(), fast[i].getPosDonaY());
+        }
+        
+        for(int i = 0; i < ag.length; i++){
+           barras.sumapuntosagua(ag[i].getPosAguaX(), ag[i].getPosAguaY(), ag[i].getPosPesaX(), ag[i].getPosPesaY());
         }
         
         barras.gameover();                                          //cuando se pierde(puntos llegan a 0)

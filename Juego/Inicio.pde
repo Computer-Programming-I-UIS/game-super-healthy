@@ -97,6 +97,7 @@ class Inicio {                    //clase para determinar las pantallas(los fond
       frameRate(6);
       image(images3[ImageIndex3], 0, 0);
       ImageIndex3 = (ImageIndex3+1) % images3.length;
+      image(botonmenu, 375, 520);
       player.pause();
       if (sonido == true) {
         player2.play();
@@ -117,13 +118,20 @@ class Inicio {                    //clase para determinar las pantallas(los fond
 
       if (mouseX > 677 && mouseY > 544 && mouseX < 764 && mouseY < 571 && mousePressed) {      //boton para salir, volver a inicio
 
+        exit();
+        }
+        
+        if (mouseX > 375 && mouseY > 520 && mouseX < 445 && mouseY < 538 && mousePressed) {      //boton para salir, volver a inicio
+
         volver = true;
         delay(50);
         if (volver == true) {
-          frameCount = -1;
+         frameCount = -1;
           juego = 0;
           vida = 100;
           volver = false;
+          puntaje = 0;
+       
         }
       }
     }

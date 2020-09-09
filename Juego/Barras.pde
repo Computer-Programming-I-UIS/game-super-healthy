@@ -141,6 +141,20 @@ if(juego == 3 && sonido ==false){
     }
   }
 
+  void sumapuntosagua(float posaguax, float posaguay, float pospesax, float pospesay) {
+    if ((posaguax > posx - 20 && posaguax < posx + 70 && posaguay + 70 > posy + 10 && posaguay + 70 < posy + 70) ||
+      (pospesax > posx - 20 && pospesax < posx + 70 && pospesay + 70 > posy + 10 && pospesay + 70 < posy + 70)) {
+      suma =!suma;
+    } 
+    if (suma == true && vida < 100) {
+      vida = vida + 0.2; 
+
+      if (sonido == true) {
+        sonido1.trigger();
+      }
+      suma = false;
+    }
+  }
   void gameover() {                  //cuando la vida llega a 0 
     if (vida <= 0) {
 
