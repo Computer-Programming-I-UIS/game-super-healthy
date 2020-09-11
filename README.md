@@ -7,7 +7,7 @@ Este es un vídeojuego educativo y para todo publico en el que el usuario debe h
 Es necesaria la instalación de la libreria "Minim"**
 
 ---
-![./PantallaInicio1.png](./PantallaInicio1.png)
+![./iniciosi.png](./PantallaInicio1.png)
 ![./PantallaJuego2.png](./PantallaJuego2.png)
 
 ###### Imagen del videojuego corriendo en Processing 3**
@@ -20,7 +20,12 @@ Es necesaria la instalación de la libreria "Minim"**
     
 3. Al hacer click sobre "creditos" se mustra el nombre de los autores del programa y de los sonidos utilizados en la producción del mismo.
 
-4. Al hacer click en "PLAY" se muestra una animación del peronaje principal dando indicaciones sobre una dieta balanceada y una ilustración que muestra los cinco principlaes grupos alimenticios.
+4. Al hacer click en "PLAY" se muestra una animación del peronaje principal en una historia que explica el inicio del personaje como héroe .
+    - Se muestra una botón con una flecha que representa "siguiente".
+    
+    ![./historia.png](./Historia.png)
+    
+    4. Al hacer click en "siguiente" se muestra una animación del peronaje principal dando indicaciones sobre una dieta balanceada y una ilustración que muestra los cinco principlaes grupos alimenticios.
     - Se muestra una botón con una flecha que representa "siguiente".
     
     ![./GUIAGRANDE.png](./GUIAGRANDE.png)
