@@ -7,7 +7,7 @@ Este es un vídeojuego educativo y para todo publico en el que el usuario debe h
 Es necesaria la instalación de la libreria "Minim"**
 
 ---
-![./PantallaInicio1.png](./PantallaInicio1.png)
+![./iniciosi.png](./PantallaInicio1.png)
 ![./PantallaJuego2.png](./PantallaJuego2.png)
 
 ###### Imagen del videojuego corriendo en Processing 3**
@@ -20,23 +20,28 @@ Es necesaria la instalación de la libreria "Minim"**
     
 3. Al hacer click sobre "creditos" se mustra el nombre de los autores del programa y de los sonidos utilizados en la producción del mismo.
 
-4. Al hacer click en "PLAY" se muestra una animación del peronaje principal dando indicaciones sobre una dieta balanceada y una ilustración que muestra los cinco principlaes grupos alimenticios.
+4. Al hacer click en "PLAY" se muestra una animación del peronaje principal en una historia que explica el inicio del personaje como héroe .
+    - Se muestra una botón con una flecha que representa "siguiente".
+    
+    ![./historia.png](./PantallaJuego2.png)
+    
+5. Al hacer click en "siguiente" se muestra una animación del peronaje principal dando indicaciones sobre una dieta balanceada y una ilustración que muestra los cinco principlaes grupos alimenticios.
     - Se muestra una botón con una flecha que representa "siguiente".
     
     ![./GUIAGRANDE.png](./GUIAGRANDE.png)
 
-5. Al presionar "siguiente" se muestran las instrucciones de juego con una animación del personaje moviendose al mover las flechas del teclado.
+6. Al presionar "siguiente" se muestran las instrucciones de juego con una animación del personaje moviendose al mover las flechas del teclado.
     - Se muestra la comida "sana" que el personaje debería consumir.
     - Se muestra un botón con una flecha que representa "siguiente".
     
      ![./instrucciones1pequeña.png](./instrucciones1pequeña.png)
      ![./instrucciones2pequeña.png](./instrucciones2pequeña.png)
 
-6. Al presionar "siguiente" se muestra la segunda parte de las instrucciones.
+7. Al presionar "siguiente" se muestra la segunda parte de las instrucciones.
    - Se muestra la comida a "evitar" que el personaje no debería consumir.
    - Se muestra un botón con una flecha que representa "siguiente".
  
-7. Al presionar "siguiente" se muestra la pantalla de juego.
+8. Al presionar "siguiente" se muestra la pantalla de juego.
    - Se muestra el personaje que se mueve al presionar las flechas "izquierda" o "derecha".
    - Se muestran los alimentos que "caen" desde la parte superior de la pantalla.
    - Se muestra la barra de vida representada con un corazón, que aumenta al consumir alimentos saludables y disminuye al consumir alimentos dañinos.
@@ -45,7 +50,7 @@ Es necesaria la instalación de la libreria "Minim"**
    - Se muestra un botón sonido para quitar/poner el sonido.
    - Se muestra un botón "Pausa" para pausar el juego, y se muestra en su lugar un botón de "play" para reanudar el juego.
  
-8. Si la vida llega a "0" por dejar de consumir alimentos saludables o por consumir alimentos dañinos:
+9. Si la vida llega a "0" por dejar de consumir alimentos saludables o por consumir alimentos dañinos:
    - Se muestra una imagen del personaje con "x" en lugar sus ojos. 
    - Si el sonido está activado se reproduce un audio característico de "game over".
    - Se muestra un botón intermitente "volver a intentarlo" para reanudar el juego.
@@ -53,8 +58,8 @@ Es necesaria la instalación de la libreria "Minim"**
    
    ![./GameOverGrande.png](./GameOverGrande.png)
    
-9. Es un videojuego educativo y apto para todo publico.
+10. Es un videojuego educativo y apto para todo publico.
 
 ###### Autores:
 - Dayanna Navarro.
-- Néstor Galvis.
+- Néstor Galvis.  
