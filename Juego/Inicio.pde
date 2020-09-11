@@ -26,9 +26,26 @@ class Inicio {                    //clase para determinar las pantallas(los fond
 
   void comenzar() { 
     if (juego == 0 && mousePressed && mouseX > 338 && mouseY < 484 && mouseY > 365 && mouseY < 410) {       //al dar click en play
-      juego = 5;                               //va a 5 que representa la guia de dieta balanceada
+      juego = 7;                               //va a 7 que representa la historia
     }
 
+if (juego == 7) {                 //historia
+      frameRate(6);
+      image(images6[ImageIndex6], 0, 0);      //muestra las animaciones correspondientes
+      if (ImageIndex6 < maxImages6 -1 ) {
+        ImageIndex6 = (ImageIndex6+1);
+      }
+    }
+    
+    if (juego == 7 && mouseX > 700 && mouseY > 0 && mousePressed && mouseX < 800 && mouseY < 50) {            //si se da click en siguinte
+      siguiente = true;
+
+      if (siguiente == true) {
+        juego = 5;                     //va a 5 que es la guia
+        siguiente = false;
+      }
+    }
+    
     if (juego == 5) {                 //guia
       frameRate(6);
       image(images4[ImageIndex4], 0, 0);      //muestra las animaciones correspondientes

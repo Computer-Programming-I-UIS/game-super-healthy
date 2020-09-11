@@ -91,6 +91,11 @@ int ImageIndex5 = 0;
 
 PImage [] images5 = new PImage[maxImages5];
 
+int maxImages6 = 120;                         //historia
+int ImageIndex6 = 0;
+
+PImage [] images6 = new PImage[maxImages6];
+
 PImage creditos;                                  //imagenes auxiliares
   
 PImage mute;
@@ -161,6 +166,10 @@ void setup(){
   
   for(int i = 0; i < images5.length; i++){
    images5[i] = loadImage("SH ANIMADO_" + i + ".png"); 
+  }
+  
+  for(int i = 0; i < images6.length; i++){
+   images6[i] = loadImage("Historia_" + i + ".png"); 
   }
   
   mute = loadImage("mute.jpeg");                                                //guardar imagenes en variables
