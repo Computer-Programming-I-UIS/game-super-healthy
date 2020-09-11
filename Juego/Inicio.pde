@@ -34,10 +34,12 @@ if (juego == 7) {                 //historia
       image(images6[ImageIndex6], 0, 0);      //muestra las animaciones correspondientes
       if (ImageIndex6 < maxImages6 -1 ) {
         ImageIndex6 = (ImageIndex6+1);
+        
+        image(boton, 670, 25);
       }
     }
     
-    if (juego == 7 && mouseX > 700 && mouseY > 0 && mousePressed && mouseX < 800 && mouseY < 50) {            //si se da click en siguinte
+    if (juego == 7 && mouseX > 670 && mouseY > 25 && mousePressed && mouseX < 750 && mouseY < 65) {            //si se da click en siguinte
       siguiente = true;
 
       if (siguiente == true) {

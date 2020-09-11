@@ -101,6 +101,8 @@ PImage creditos;                                  //imagenes auxiliares
 PImage mute;
 PImage muteno;
 
+PImage boton;
+
 PFont fuente;
 
 float vida = 100;
@@ -222,6 +224,8 @@ void setup(){
     
     on = loadImage("on.png");
     off = loadImage("off.png");
+  
+    boton = loadImage("siguienteboton.png");
      
      inicio = new Inicio();                                                         //clases
      pj = new PantallaJuego();
