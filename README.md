@@ -61,4 +61,4 @@ Es necesaria la instalación de la libreria "Minim"**
 
 ###### Autores:
 - Dayanna Navarro.
-- Néstor Galvis.
+- Néstor Galvis.  
