@@ -103,6 +103,8 @@ PImage muteno;
 
 PImage boton;
 
+PImage salirboton;
+
 PFont fuente;
 
 float vida = 100;
@@ -226,6 +228,8 @@ void setup(){
     off = loadImage("off.png");
   
     boton = loadImage("siguienteboton.png");
+    
+    salirboton = loadImage("salir 20.png");
      
      inicio = new Inicio();                                                         //clases
      pj = new PantallaJuego();

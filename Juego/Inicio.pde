@@ -10,6 +10,7 @@ class Inicio {                    //clase para determinar las pantallas(los fond
       frameRate(6);
       image(images[ImageIndex], 0, 0);                        //muetra la animación, los botones
       ImageIndex = (ImageIndex+1) % images.length;
+      image(salirboton, 355, 550);
       if (sonido == true) {                                   //muestra el boton correspondiente de audio dependiendo de la boolean, sonido
         image(mute, 371, 495); 
         if (!player3.isPlaying()) {
@@ -25,8 +26,12 @@ class Inicio {                    //clase para determinar las pantallas(los fond
   }
 
   void comenzar() { 
-    if (juego == 0 && mousePressed && mouseX > 338 && mouseY < 484 && mouseY > 365 && mouseY < 410) {       //al dar click en play
+    if (juego == 0 && mousePressed && mouseX > 338 && mouseX < 484 && mouseY > 365 && mouseY < 410) {       //al dar click en play
       juego = 7;                               //va a 7 que representa la historia
+    }
+    
+    if (juego == 0 && mousePressed && mouseX > 355 && mouseY > 550 && mouseY > 4 && mouseX < 586) {       //salir
+      exit();                               //sale
     }
 
 if (juego == 7) {                 //historia
